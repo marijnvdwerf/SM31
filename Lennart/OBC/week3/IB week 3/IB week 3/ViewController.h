@@ -12,11 +12,18 @@
     UIPickerView *singlePicker;
     NSArray * daderArray;
     NSArray * wapenArray;
+    NSArray * motiefArray;
+    NSString * dader;
+    NSString * wapen;
+    NSString * motief;
 }
 
 @property (nonatomic,retain) IBOutlet UIPickerView *singlePicker;
 @property (nonatomic,retain) NSArray *daderArray;
 @property (nonatomic,retain) NSArray *wapenArray;
 @property (nonatomic,retain) NSArray *motiefArray;
+
+- (IBAction)makePlot:(id)sender;
+
 
 @end

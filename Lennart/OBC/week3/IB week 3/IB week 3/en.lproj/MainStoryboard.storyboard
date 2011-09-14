@@ -21,22 +21,22 @@
                                     <outlet property="delegate" destination="2" id="8zQ-N6-sa1"/>
                                 </connections>
                             </pickerView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dader" lineBreakMode="tailTruncation" minimumFontSize="10" id="so3-IL-UpW">
-                                <rect key="frame" x="60" y="55" width="69" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dader" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="so3-IL-UpW">
+                                <rect key="frame" x="7" y="55" width="100" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Wapen" lineBreakMode="tailTruncation" minimumFontSize="10" id="lXX-nO-VU6">
-                                <rect key="frame" x="213" y="55" width="54" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Wapen" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="lXX-nO-VU6">
+                                <rect key="frame" x="106" y="55" width="190" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Motief" lineBreakMode="tailTruncation" minimumFontSize="10" id="aNo-Q5-Nkd">
-                                <rect key="frame" x="367" y="55" width="66" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Motief" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="aNo-Q5-Nkd">
+                                <rect key="frame" x="304" y="55" width="160" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -53,6 +53,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="makePlot:" destination="2" eventType="touchUpInside" id="ggz-IK-1xz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -66,6 +69,7 @@
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
+                <relationship kind="action" name="makePlot:"/>
                 <relationship kind="outlet" name="singlePicker" candidateClass="UIPickerView"/>
             </relationships>
         </class>

@@ -30,10 +30,15 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    self.daderArray = [[NSArray alloc] initWithObjects:@"Jan", @"Henk",@"Piet",@"André",@"Tom", nil];
-    self.wapenArray = [[NSArray alloc] initWithObjects:@"Pistool", @"Mes",@"knuppel",@"Wurging",@"Granaat",@"Autobom",@"Duw in ravijn", nil];
-    self.motiefArray = [[NSArray alloc] initWithObjects:@"Jaloers", @"Overspel",@"Geflipt",@"Wraak",@"Afgunst", nil];
 
+    
+    self.daderArray = [[NSArray alloc] initWithObjects:@"Jan", @"Henk",@"Piet",@"André",@"Tom", nil];
+    self.wapenArray = [[NSArray alloc] initWithObjects:@"pistool", @"mes",@"knuppel",@"wurging",@"granaat",@"autobom",@"duw in een ravijn",@"gifinjectie", nil];
+    self.motiefArray = [[NSArray alloc] initWithObjects:@"jaloezie", @"overspel",@"ruzie",@"gestoordheid",@"wraak",@"afgunst", nil];
+    
+    dader = [daderArray objectAtIndex:0];
+    wapen = [wapenArray objectAtIndex:0];
+    motief = [motiefArray objectAtIndex:0];
 }
 
 - (void)viewDidUnload
@@ -111,10 +116,48 @@
 }
 
 
+- (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component
+{
+    if(component == 0) {
+        return 100;
+    } else if(component ==1) {
+        return 190;
+    } else {
+        return 160;
+    }
+}
+
+
+
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    if(component == 0) {
+        dader = [daderArray objectAtIndex:row];
+    } else if(component ==1) {
+        wapen = [wapenArray objectAtIndex:row];
+
+    } else {
+        motief = [motiefArray objectAtIndex:row];
+    }
+    
+}
 
 
 
 
 
-
+- (IBAction)makePlot:(id)sender {
+    
+    NSLog(@"%i", [singlePicker selectedRowInComponent:0]);
+    
+    
+    NSString * content = [[NSString alloc] initWithFormat:@"%@ vermoordt piet met een %@ vanwege %@.", dader, wapen, motief];
+    UIAlertView *alert = [[UIAlertView alloc] init];
+	[alert setTitle:@"Plot"];
+	[alert setMessage:content];
+	[alert setDelegate:self];
+	[alert addButtonWithTitle:@"Close"];
+	[alert show];
+}
 @end
