@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UIPickerViewDelegate,UIPickerViewDataSource>{
-    UIPickerView * singlePicker;
-    NSArray * pickerData;
+@interface ViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource> {
+    UIPickerView *singlePicker;
+    NSArray * daderArray;
+    NSArray * wapenArray;
 }
 
 @property (nonatomic,retain) IBOutlet UIPickerView *singlePicker;
-@property (nonatomic,retain) NSArray *pickerData;
+@property (nonatomic,retain) NSArray *daderArray;
+@property (nonatomic,retain) NSArray *wapenArray;
+@property (nonatomic,retain) NSArray *motiefArray;
 
 @end

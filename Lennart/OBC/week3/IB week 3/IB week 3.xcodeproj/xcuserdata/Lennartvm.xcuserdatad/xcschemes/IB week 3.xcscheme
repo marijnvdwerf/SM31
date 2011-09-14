@@ -13,7 +13,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7B7136B71420A8940074C8D2"
+               BlueprintIdentifier = "7B7136E71420AD0B0074C8D2"
                BuildableName = "IB week 3.app"
                BlueprintName = "IB week 3"
                ReferencedContainer = "container:IB week 3.xcodeproj">
@@ -31,7 +31,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7B7136B71420A8940074C8D2"
+            BlueprintIdentifier = "7B7136E71420AD0B0074C8D2"
             BuildableName = "IB week 3.app"
             BlueprintName = "IB week 3"
             ReferencedContainer = "container:IB week 3.xcodeproj">
@@ -49,7 +49,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7B7136B71420A8940074C8D2"
+            BlueprintIdentifier = "7B7136E71420AD0B0074C8D2"
             BuildableName = "IB week 3.app"
             BlueprintName = "IB week 3"
             ReferencedContainer = "container:IB week 3.xcodeproj">
@@ -67,7 +67,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7B7136B71420A8940074C8D2"
+            BlueprintIdentifier = "7B7136E71420AD0B0074C8D2"
             BuildableName = "IB week 3.app"
             BlueprintName = "IB week 3"
             ReferencedContainer = "container:IB week 3.xcodeproj">
