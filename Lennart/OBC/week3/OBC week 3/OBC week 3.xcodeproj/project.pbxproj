@@ -1,0 +1,237 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7B7136A01420A7810074C8D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B71369F1420A7810074C8D2 /* Foundation.framework */; };
+		7B7136A31420A7810074C8D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B7136A21420A7810074C8D2 /* main.m */; };
+		7B7136A71420A7820074C8D2 /* OBC_week_3.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7B7136A61420A7820074C8D2 /* OBC_week_3.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7B7136991420A7810074C8D2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				7B7136A71420A7820074C8D2 /* OBC_week_3.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7B71369B1420A7810074C8D2 /* OBC week 3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "OBC week 3"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B71369F1420A7810074C8D2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7B7136A21420A7810074C8D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7B7136A51420A7820074C8D2 /* OBC week 3-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OBC week 3-Prefix.pch"; sourceTree = "<group>"; };
+		7B7136A61420A7820074C8D2 /* OBC_week_3.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = OBC_week_3.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7B7136981420A7810074C8D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B7136A01420A7810074C8D2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7B7136901420A7810074C8D2 = {
+			isa = PBXGroup;
+			children = (
+				7B7136A11420A7810074C8D2 /* OBC week 3 */,
+				7B71369E1420A7810074C8D2 /* Frameworks */,
+				7B71369C1420A7810074C8D2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7B71369C1420A7810074C8D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7B71369B1420A7810074C8D2 /* OBC week 3 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7B71369E1420A7810074C8D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B71369F1420A7810074C8D2 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B7136A11420A7810074C8D2 /* OBC week 3 */ = {
+			isa = PBXGroup;
+			children = (
+				7B7136A21420A7810074C8D2 /* main.m */,
+				7B7136A61420A7820074C8D2 /* OBC_week_3.1 */,
+				7B7136A41420A7820074C8D2 /* Supporting Files */,
+			);
+			path = "OBC week 3";
+			sourceTree = "<group>";
+		};
+		7B7136A41420A7820074C8D2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7B7136A51420A7820074C8D2 /* OBC week 3-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7B71369A1420A7810074C8D2 /* OBC week 3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B7136AA1420A7820074C8D2 /* Build configuration list for PBXNativeTarget "OBC week 3" */;
+			buildPhases = (
+				7B7136971420A7810074C8D2 /* Sources */,
+				7B7136981420A7810074C8D2 /* Frameworks */,
+				7B7136991420A7810074C8D2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OBC week 3";
+			productName = "OBC week 3";
+			productReference = 7B71369B1420A7810074C8D2 /* OBC week 3 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7B7136921420A7810074C8D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "-";
+			};
+			buildConfigurationList = 7B7136951420A7810074C8D2 /* Build configuration list for PBXProject "OBC week 3" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7B7136901420A7810074C8D2;
+			productRefGroup = 7B71369C1420A7810074C8D2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7B71369A1420A7810074C8D2 /* OBC week 3 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7B7136971420A7810074C8D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B7136A31420A7810074C8D2 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7B7136A81420A7820074C8D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7B7136A91420A7820074C8D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7B7136AB1420A7820074C8D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OBC week 3/OBC week 3-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7B7136AC1420A7820074C8D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OBC week 3/OBC week 3-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7B7136951420A7810074C8D2 /* Build configuration list for PBXProject "OBC week 3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B7136A81420A7820074C8D2 /* Debug */,
+				7B7136A91420A7820074C8D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B7136AA1420A7820074C8D2 /* Build configuration list for PBXNativeTarget "OBC week 3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B7136AB1420A7820074C8D2 /* Debug */,
+				7B7136AC1420A7820074C8D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7B7136921420A7810074C8D2 /* Project object */;
+}
