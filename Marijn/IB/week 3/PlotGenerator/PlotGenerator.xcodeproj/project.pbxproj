@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C6B61C9F1420A991005DDEFC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B61C9E1420A991005DDEFC /* UIKit.framework */; };
+		C6B61CA11420A991005DDEFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B61CA01420A991005DDEFC /* Foundation.framework */; };
+		C6B61CA31420A991005DDEFC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B61CA21420A991005DDEFC /* CoreGraphics.framework */; };
+		C6B61CA91420A991005DDEFC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6B61CA71420A991005DDEFC /* InfoPlist.strings */; };
+		C6B61CAB1420A991005DDEFC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B61CAA1420A991005DDEFC /* main.m */; };
+		C6B61CAF1420A991005DDEFC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B61CAE1420A991005DDEFC /* AppDelegate.m */; };
+		C6B61CB21420A991005DDEFC /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B61CB01420A991005DDEFC /* MainStoryboard.storyboard */; };
+		C6B61CB51420A991005DDEFC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B61CB41420A991005DDEFC /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C6B61C9A1420A991005DDEFC /* PlotGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlotGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6B61C9E1420A991005DDEFC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C6B61CA01420A991005DDEFC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C6B61CA21420A991005DDEFC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C6B61CA61420A991005DDEFC /* PlotGenerator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlotGenerator-Info.plist"; sourceTree = "<group>"; };
+		C6B61CA81420A991005DDEFC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C6B61CAA1420A991005DDEFC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C6B61CAC1420A991005DDEFC /* PlotGenerator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlotGenerator-Prefix.pch"; sourceTree = "<group>"; };
+		C6B61CAD1420A991005DDEFC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C6B61CAE1420A991005DDEFC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C6B61CB11420A991005DDEFC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		C6B61CB31420A991005DDEFC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C6B61CB41420A991005DDEFC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C6B61C971420A991005DDEFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6B61C9F1420A991005DDEFC /* UIKit.framework in Frameworks */,
+				C6B61CA11420A991005DDEFC /* Foundation.framework in Frameworks */,
+				C6B61CA31420A991005DDEFC /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C6B61C8F1420A990005DDEFC = {
+			isa = PBXGroup;
+			children = (
+				C6B61CA41420A991005DDEFC /* PlotGenerator */,
+				C6B61C9D1420A991005DDEFC /* Frameworks */,
+				C6B61C9B1420A991005DDEFC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C6B61C9B1420A991005DDEFC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C6B61C9A1420A991005DDEFC /* PlotGenerator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6B61C9D1420A991005DDEFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6B61C9E1420A991005DDEFC /* UIKit.framework */,
+				C6B61CA01420A991005DDEFC /* Foundation.framework */,
+				C6B61CA21420A991005DDEFC /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C6B61CA41420A991005DDEFC /* PlotGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				C6B61CAD1420A991005DDEFC /* AppDelegate.h */,
+				C6B61CAE1420A991005DDEFC /* AppDelegate.m */,
+				C6B61CB01420A991005DDEFC /* MainStoryboard.storyboard */,
+				C6B61CB31420A991005DDEFC /* ViewController.h */,
+				C6B61CB41420A991005DDEFC /* ViewController.m */,
+				C6B61CA51420A991005DDEFC /* Supporting Files */,
+			);
+			path = PlotGenerator;
+			sourceTree = "<group>";
+		};
+		C6B61CA51420A991005DDEFC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C6B61CA61420A991005DDEFC /* PlotGenerator-Info.plist */,
+				C6B61CA71420A991005DDEFC /* InfoPlist.strings */,
+				C6B61CAA1420A991005DDEFC /* main.m */,
+				C6B61CAC1420A991005DDEFC /* PlotGenerator-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C6B61C991420A991005DDEFC /* PlotGenerator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6B61CB81420A991005DDEFC /* Build configuration list for PBXNativeTarget "PlotGenerator" */;
+			buildPhases = (
+				C6B61C961420A991005DDEFC /* Sources */,
+				C6B61C971420A991005DDEFC /* Frameworks */,
+				C6B61C981420A991005DDEFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlotGenerator;
+			productName = PlotGenerator;
+			productReference = C6B61C9A1420A991005DDEFC /* PlotGenerator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C6B61C911420A990005DDEFC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Fontys Hogeschool ICT";
+			};
+			buildConfigurationList = C6B61C941420A990005DDEFC /* Build configuration list for PBXProject "PlotGenerator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C6B61C8F1420A990005DDEFC;
+			productRefGroup = C6B61C9B1420A991005DDEFC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C6B61C991420A991005DDEFC /* PlotGenerator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C6B61C981420A991005DDEFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6B61CA91420A991005DDEFC /* InfoPlist.strings in Resources */,
+				C6B61CB21420A991005DDEFC /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C6B61C961420A991005DDEFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6B61CAB1420A991005DDEFC /* main.m in Sources */,
+				C6B61CAF1420A991005DDEFC /* AppDelegate.m in Sources */,
+				C6B61CB51420A991005DDEFC /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C6B61CA71420A991005DDEFC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6B61CA81420A991005DDEFC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C6B61CB01420A991005DDEFC /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6B61CB11420A991005DDEFC /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C6B61CB61420A991005DDEFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C6B61CB71420A991005DDEFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C6B61CB91420A991005DDEFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlotGenerator/PlotGenerator-Prefix.pch";
+				INFOPLIST_FILE = "PlotGenerator/PlotGenerator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C6B61CBA1420A991005DDEFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlotGenerator/PlotGenerator-Prefix.pch";
+				INFOPLIST_FILE = "PlotGenerator/PlotGenerator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C6B61C941420A990005DDEFC /* Build configuration list for PBXProject "PlotGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6B61CB61420A991005DDEFC /* Debug */,
+				C6B61CB71420A991005DDEFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6B61CB81420A991005DDEFC /* Build configuration list for PBXNativeTarget "PlotGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6B61CB91420A991005DDEFC /* Debug */,
+				C6B61CBA1420A991005DDEFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C6B61C911420A990005DDEFC /* Project object */;
+}
