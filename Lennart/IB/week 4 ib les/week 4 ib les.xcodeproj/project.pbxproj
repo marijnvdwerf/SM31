@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7BD177C21429E922001F5E9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD177C11429E922001F5E9B /* UIKit.framework */; };
+		7BD177C41429E922001F5E9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD177C31429E922001F5E9B /* Foundation.framework */; };
+		7BD177C61429E922001F5E9B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD177C51429E922001F5E9B /* CoreGraphics.framework */; };
+		7BD177CC1429E922001F5E9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BD177CA1429E922001F5E9B /* InfoPlist.strings */; };
+		7BD177CE1429E922001F5E9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD177CD1429E922001F5E9B /* main.m */; };
+		7BD177D21429E922001F5E9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD177D11429E922001F5E9B /* AppDelegate.m */; };
+		7BD177D51429E922001F5E9B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD177D31429E922001F5E9B /* MainStoryboard.storyboard */; };
+		7BD177D81429E922001F5E9B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD177D71429E922001F5E9B /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7BD177BD1429E922001F5E9B /* week 4 ib les.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "week 4 ib les.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BD177C11429E922001F5E9B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7BD177C31429E922001F5E9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7BD177C51429E922001F5E9B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7BD177C91429E922001F5E9B /* week 4 ib les-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "week 4 ib les-Info.plist"; sourceTree = "<group>"; };
+		7BD177CB1429E922001F5E9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7BD177CD1429E922001F5E9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7BD177CF1429E922001F5E9B /* week 4 ib les-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "week 4 ib les-Prefix.pch"; sourceTree = "<group>"; };
+		7BD177D01429E922001F5E9B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7BD177D11429E922001F5E9B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7BD177D41429E922001F5E9B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		7BD177D61429E922001F5E9B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7BD177D71429E922001F5E9B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7BD177BA1429E922001F5E9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BD177C21429E922001F5E9B /* UIKit.framework in Frameworks */,
+				7BD177C41429E922001F5E9B /* Foundation.framework in Frameworks */,
+				7BD177C61429E922001F5E9B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7BD177B21429E922001F5E9B = {
+			isa = PBXGroup;
+			children = (
+				7BD177C71429E922001F5E9B /* week 4 ib les */,
+				7BD177C01429E922001F5E9B /* Frameworks */,
+				7BD177BE1429E922001F5E9B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7BD177BE1429E922001F5E9B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7BD177BD1429E922001F5E9B /* week 4 ib les.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7BD177C01429E922001F5E9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BD177C11429E922001F5E9B /* UIKit.framework */,
+				7BD177C31429E922001F5E9B /* Foundation.framework */,
+				7BD177C51429E922001F5E9B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7BD177C71429E922001F5E9B /* week 4 ib les */ = {
+			isa = PBXGroup;
+			children = (
+				7BD177D01429E922001F5E9B /* AppDelegate.h */,
+				7BD177D11429E922001F5E9B /* AppDelegate.m */,
+				7BD177D31429E922001F5E9B /* MainStoryboard.storyboard */,
+				7BD177D61429E922001F5E9B /* ViewController.h */,
+				7BD177D71429E922001F5E9B /* ViewController.m */,
+				7BD177C81429E922001F5E9B /* Supporting Files */,
+			);
+			path = "week 4 ib les";
+			sourceTree = "<group>";
+		};
+		7BD177C81429E922001F5E9B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7BD177C91429E922001F5E9B /* week 4 ib les-Info.plist */,
+				7BD177CA1429E922001F5E9B /* InfoPlist.strings */,
+				7BD177CD1429E922001F5E9B /* main.m */,
+				7BD177CF1429E922001F5E9B /* week 4 ib les-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7BD177BC1429E922001F5E9B /* week 4 ib les */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BD177DB1429E922001F5E9B /* Build configuration list for PBXNativeTarget "week 4 ib les" */;
+			buildPhases = (
+				7BD177B91429E922001F5E9B /* Sources */,
+				7BD177BA1429E922001F5E9B /* Frameworks */,
+				7BD177BB1429E922001F5E9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "week 4 ib les";
+			productName = "week 4 ib les";
+			productReference = 7BD177BD1429E922001F5E9B /* week 4 ib les.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7BD177B41429E922001F5E9B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "-";
+			};
+			buildConfigurationList = 7BD177B71429E922001F5E9B /* Build configuration list for PBXProject "week 4 ib les" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7BD177B21429E922001F5E9B;
+			productRefGroup = 7BD177BE1429E922001F5E9B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7BD177BC1429E922001F5E9B /* week 4 ib les */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7BD177BB1429E922001F5E9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BD177CC1429E922001F5E9B /* InfoPlist.strings in Resources */,
+				7BD177D51429E922001F5E9B /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7BD177B91429E922001F5E9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BD177CE1429E922001F5E9B /* main.m in Sources */,
+				7BD177D21429E922001F5E9B /* AppDelegate.m in Sources */,
+				7BD177D81429E922001F5E9B /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7BD177CA1429E922001F5E9B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BD177CB1429E922001F5E9B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7BD177D31429E922001F5E9B /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BD177D41429E922001F5E9B /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7BD177D91429E922001F5E9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7BD177DA1429E922001F5E9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7BD177DC1429E922001F5E9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "week 4 ib les/week 4 ib les-Prefix.pch";
+				INFOPLIST_FILE = "week 4 ib les/week 4 ib les-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7BD177DD1429E922001F5E9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "week 4 ib les/week 4 ib les-Prefix.pch";
+				INFOPLIST_FILE = "week 4 ib les/week 4 ib les-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7BD177B71429E922001F5E9B /* Build configuration list for PBXProject "week 4 ib les" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BD177D91429E922001F5E9B /* Debug */,
+				7BD177DA1429E922001F5E9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BD177DB1429E922001F5E9B /* Build configuration list for PBXNativeTarget "week 4 ib les" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BD177DC1429E922001F5E9B /* Debug */,
+				7BD177DD1429E922001F5E9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7BD177B41429E922001F5E9B /* Project object */;
+}

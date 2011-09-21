@@ -1,0 +1,264 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7BD177EE1429E9E8001F5E9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD177ED1429E9E8001F5E9B /* UIKit.framework */; };
+		7BD177F01429E9E8001F5E9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD177EF1429E9E8001F5E9B /* Foundation.framework */; };
+		7BD177F21429E9E8001F5E9B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD177F11429E9E8001F5E9B /* CoreGraphics.framework */; };
+		7BD177F81429E9E8001F5E9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BD177F61429E9E8001F5E9B /* InfoPlist.strings */; };
+		7BD177FA1429E9E8001F5E9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD177F91429E9E8001F5E9B /* main.m */; };
+		7BD177FE1429E9E8001F5E9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD177FD1429E9E8001F5E9B /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7BD177E91429E9E8001F5E9B /* week 4 les ib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "week 4 les ib.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BD177ED1429E9E8001F5E9B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7BD177EF1429E9E8001F5E9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7BD177F11429E9E8001F5E9B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7BD177F51429E9E8001F5E9B /* week 4 les ib-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "week 4 les ib-Info.plist"; sourceTree = "<group>"; };
+		7BD177F71429E9E8001F5E9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7BD177F91429E9E8001F5E9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7BD177FB1429E9E8001F5E9B /* week 4 les ib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "week 4 les ib-Prefix.pch"; sourceTree = "<group>"; };
+		7BD177FC1429E9E8001F5E9B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7BD177FD1429E9E8001F5E9B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7BD177E61429E9E8001F5E9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BD177EE1429E9E8001F5E9B /* UIKit.framework in Frameworks */,
+				7BD177F01429E9E8001F5E9B /* Foundation.framework in Frameworks */,
+				7BD177F21429E9E8001F5E9B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7BD177DE1429E9E8001F5E9B = {
+			isa = PBXGroup;
+			children = (
+				7BD177F31429E9E8001F5E9B /* week 4 les ib */,
+				7BD177EC1429E9E8001F5E9B /* Frameworks */,
+				7BD177EA1429E9E8001F5E9B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7BD177EA1429E9E8001F5E9B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7BD177E91429E9E8001F5E9B /* week 4 les ib.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7BD177EC1429E9E8001F5E9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BD177ED1429E9E8001F5E9B /* UIKit.framework */,
+				7BD177EF1429E9E8001F5E9B /* Foundation.framework */,
+				7BD177F11429E9E8001F5E9B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7BD177F31429E9E8001F5E9B /* week 4 les ib */ = {
+			isa = PBXGroup;
+			children = (
+				7BD177FC1429E9E8001F5E9B /* AppDelegate.h */,
+				7BD177FD1429E9E8001F5E9B /* AppDelegate.m */,
+				7BD177F41429E9E8001F5E9B /* Supporting Files */,
+			);
+			path = "week 4 les ib";
+			sourceTree = "<group>";
+		};
+		7BD177F41429E9E8001F5E9B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7BD177F51429E9E8001F5E9B /* week 4 les ib-Info.plist */,
+				7BD177F61429E9E8001F5E9B /* InfoPlist.strings */,
+				7BD177F91429E9E8001F5E9B /* main.m */,
+				7BD177FB1429E9E8001F5E9B /* week 4 les ib-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7BD177E81429E9E8001F5E9B /* week 4 les ib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BD178011429E9E8001F5E9B /* Build configuration list for PBXNativeTarget "week 4 les ib" */;
+			buildPhases = (
+				7BD177E51429E9E8001F5E9B /* Sources */,
+				7BD177E61429E9E8001F5E9B /* Frameworks */,
+				7BD177E71429E9E8001F5E9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "week 4 les ib";
+			productName = "week 4 les ib";
+			productReference = 7BD177E91429E9E8001F5E9B /* week 4 les ib.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7BD177E01429E9E8001F5E9B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "-";
+			};
+			buildConfigurationList = 7BD177E31429E9E8001F5E9B /* Build configuration list for PBXProject "week 4 les ib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7BD177DE1429E9E8001F5E9B;
+			productRefGroup = 7BD177EA1429E9E8001F5E9B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7BD177E81429E9E8001F5E9B /* week 4 les ib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7BD177E71429E9E8001F5E9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BD177F81429E9E8001F5E9B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7BD177E51429E9E8001F5E9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BD177FA1429E9E8001F5E9B /* main.m in Sources */,
+				7BD177FE1429E9E8001F5E9B /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7BD177F61429E9E8001F5E9B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BD177F71429E9E8001F5E9B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7BD177FF1429E9E8001F5E9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7BD178001429E9E8001F5E9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7BD178021429E9E8001F5E9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "week 4 les ib/week 4 les ib-Prefix.pch";
+				INFOPLIST_FILE = "week 4 les ib/week 4 les ib-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7BD178031429E9E8001F5E9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "week 4 les ib/week 4 les ib-Prefix.pch";
+				INFOPLIST_FILE = "week 4 les ib/week 4 les ib-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7BD177E31429E9E8001F5E9B /* Build configuration list for PBXProject "week 4 les ib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BD177FF1429E9E8001F5E9B /* Debug */,
+				7BD178001429E9E8001F5E9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BD178011429E9E8001F5E9B /* Build configuration list for PBXNativeTarget "week 4 les ib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BD178021429E9E8001F5E9B /* Debug */,
+				7BD178031429E9E8001F5E9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7BD177E01429E9E8001F5E9B /* Project object */;
+}

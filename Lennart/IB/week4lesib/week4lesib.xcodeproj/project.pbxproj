@@ -1,0 +1,300 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7BD178141429EA0A001F5E9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD178131429EA0A001F5E9B /* UIKit.framework */; };
+		7BD178161429EA0A001F5E9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD178151429EA0A001F5E9B /* Foundation.framework */; };
+		7BD178181429EA0A001F5E9B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD178171429EA0A001F5E9B /* CoreGraphics.framework */; };
+		7BD1781E1429EA0A001F5E9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BD1781C1429EA0A001F5E9B /* InfoPlist.strings */; };
+		7BD178201429EA0A001F5E9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1781F1429EA0A001F5E9B /* main.m */; };
+		7BD178241429EA0A001F5E9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD178231429EA0A001F5E9B /* AppDelegate.m */; };
+		7BD178271429EA0A001F5E9B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD178251429EA0A001F5E9B /* MainStoryboard.storyboard */; };
+		7BD1782A1429EA0A001F5E9B /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD178291429EA0A001F5E9B /* MasterViewController.m */; };
+		7BD1782D1429EA0A001F5E9B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1782C1429EA0A001F5E9B /* DetailViewController.m */; };
+		7BD178341429EDAC001F5E9B /* thumb_macbook.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BD178331429EDAC001F5E9B /* thumb_macbook.png */; };
+		7BD178361429EE08001F5E9B /* bomh.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BD178351429EE08001F5E9B /* bomh.png */; };
+		7BD178381429EE6A001F5E9B /* 339263.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BD178371429EE6A001F5E9B /* 339263.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7BD1780F1429EA0A001F5E9B /* week4lesib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = week4lesib.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BD178131429EA0A001F5E9B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7BD178151429EA0A001F5E9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7BD178171429EA0A001F5E9B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7BD1781B1429EA0A001F5E9B /* week4lesib-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "week4lesib-Info.plist"; sourceTree = "<group>"; };
+		7BD1781D1429EA0A001F5E9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7BD1781F1429EA0A001F5E9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7BD178211429EA0A001F5E9B /* week4lesib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "week4lesib-Prefix.pch"; sourceTree = "<group>"; };
+		7BD178221429EA0A001F5E9B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7BD178231429EA0A001F5E9B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7BD178261429EA0A001F5E9B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		7BD178281429EA0A001F5E9B /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		7BD178291429EA0A001F5E9B /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		7BD1782B1429EA0A001F5E9B /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		7BD1782C1429EA0A001F5E9B /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		7BD178331429EDAC001F5E9B /* thumb_macbook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumb_macbook.png; sourceTree = "<group>"; };
+		7BD178351429EE08001F5E9B /* bomh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bomh.png; sourceTree = "<group>"; };
+		7BD178371429EE6A001F5E9B /* 339263.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 339263.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7BD1780C1429EA0A001F5E9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BD178141429EA0A001F5E9B /* UIKit.framework in Frameworks */,
+				7BD178161429EA0A001F5E9B /* Foundation.framework in Frameworks */,
+				7BD178181429EA0A001F5E9B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7BD178041429EA0A001F5E9B = {
+			isa = PBXGroup;
+			children = (
+				7BD178191429EA0A001F5E9B /* week4lesib */,
+				7BD178121429EA0A001F5E9B /* Frameworks */,
+				7BD178101429EA0A001F5E9B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7BD178101429EA0A001F5E9B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7BD1780F1429EA0A001F5E9B /* week4lesib.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7BD178121429EA0A001F5E9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BD178131429EA0A001F5E9B /* UIKit.framework */,
+				7BD178151429EA0A001F5E9B /* Foundation.framework */,
+				7BD178171429EA0A001F5E9B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7BD178191429EA0A001F5E9B /* week4lesib */ = {
+			isa = PBXGroup;
+			children = (
+				7BD178221429EA0A001F5E9B /* AppDelegate.h */,
+				7BD178231429EA0A001F5E9B /* AppDelegate.m */,
+				7BD178251429EA0A001F5E9B /* MainStoryboard.storyboard */,
+				7BD178281429EA0A001F5E9B /* MasterViewController.h */,
+				7BD178291429EA0A001F5E9B /* MasterViewController.m */,
+				7BD1782B1429EA0A001F5E9B /* DetailViewController.h */,
+				7BD1782C1429EA0A001F5E9B /* DetailViewController.m */,
+				7BD1781A1429EA0A001F5E9B /* Supporting Files */,
+			);
+			path = week4lesib;
+			sourceTree = "<group>";
+		};
+		7BD1781A1429EA0A001F5E9B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7BD178371429EE6A001F5E9B /* 339263.png */,
+				7BD178351429EE08001F5E9B /* bomh.png */,
+				7BD178331429EDAC001F5E9B /* thumb_macbook.png */,
+				7BD1781B1429EA0A001F5E9B /* week4lesib-Info.plist */,
+				7BD1781C1429EA0A001F5E9B /* InfoPlist.strings */,
+				7BD1781F1429EA0A001F5E9B /* main.m */,
+				7BD178211429EA0A001F5E9B /* week4lesib-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7BD1780E1429EA0A001F5E9B /* week4lesib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BD178301429EA0A001F5E9B /* Build configuration list for PBXNativeTarget "week4lesib" */;
+			buildPhases = (
+				7BD1780B1429EA0A001F5E9B /* Sources */,
+				7BD1780C1429EA0A001F5E9B /* Frameworks */,
+				7BD1780D1429EA0A001F5E9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = week4lesib;
+			productName = week4lesib;
+			productReference = 7BD1780F1429EA0A001F5E9B /* week4lesib.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7BD178061429EA0A001F5E9B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "-";
+			};
+			buildConfigurationList = 7BD178091429EA0A001F5E9B /* Build configuration list for PBXProject "week4lesib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7BD178041429EA0A001F5E9B;
+			productRefGroup = 7BD178101429EA0A001F5E9B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7BD1780E1429EA0A001F5E9B /* week4lesib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7BD1780D1429EA0A001F5E9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BD1781E1429EA0A001F5E9B /* InfoPlist.strings in Resources */,
+				7BD178271429EA0A001F5E9B /* MainStoryboard.storyboard in Resources */,
+				7BD178341429EDAC001F5E9B /* thumb_macbook.png in Resources */,
+				7BD178361429EE08001F5E9B /* bomh.png in Resources */,
+				7BD178381429EE6A001F5E9B /* 339263.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7BD1780B1429EA0A001F5E9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BD178201429EA0A001F5E9B /* main.m in Sources */,
+				7BD178241429EA0A001F5E9B /* AppDelegate.m in Sources */,
+				7BD1782A1429EA0A001F5E9B /* MasterViewController.m in Sources */,
+				7BD1782D1429EA0A001F5E9B /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7BD1781C1429EA0A001F5E9B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BD1781D1429EA0A001F5E9B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7BD178251429EA0A001F5E9B /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BD178261429EA0A001F5E9B /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7BD1782E1429EA0A001F5E9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7BD1782F1429EA0A001F5E9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7BD178311429EA0A001F5E9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "week4lesib/week4lesib-Prefix.pch";
+				INFOPLIST_FILE = "week4lesib/week4lesib-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7BD178321429EA0A001F5E9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "week4lesib/week4lesib-Prefix.pch";
+				INFOPLIST_FILE = "week4lesib/week4lesib-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7BD178091429EA0A001F5E9B /* Build configuration list for PBXProject "week4lesib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BD1782E1429EA0A001F5E9B /* Debug */,
+				7BD1782F1429EA0A001F5E9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BD178301429EA0A001F5E9B /* Build configuration list for PBXNativeTarget "week4lesib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BD178311429EA0A001F5E9B /* Debug */,
+				7BD178321429EA0A001F5E9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7BD178061429EA0A001F5E9B /* Project object */;
+}
