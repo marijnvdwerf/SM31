@@ -19,7 +19,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="618" y="-524"/>
+            <point key="canvasLocation" x="627" y="-524"/>
         </scene>
         <scene sceneID="hLG-o7-SIQ">
             <objects>
@@ -234,6 +234,14 @@
             <point key="canvasLocation" x="1637" y="284"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="OrderOverviewViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OrderOverviewViewController.h"/>
+        </class>
+        <class className="ShoppingListsOverviewViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ShoppingListsOverviewViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
