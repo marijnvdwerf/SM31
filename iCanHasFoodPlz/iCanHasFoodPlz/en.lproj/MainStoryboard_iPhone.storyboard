@@ -47,7 +47,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rAO-lJ-7fJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="dAr-eK-MdW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Bestellingen" image="lijstje.png" id="6Ek-t2-um6"/>
+                    <tabBarItem key="tabBarItem" title="Bestellingen" image="bestellingtest2.png" id="6Ek-t2-um6"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="a0l-kS-RhJ">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" cyan="0.80241936449999995" magenta="0.229838714" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
@@ -146,7 +146,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Bestelling" id="qyM-82-NCV">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="eqB-84-Gj2"/>
+                        <barButtonItem key="leftBarButtonItem" title="Annuleer" id="eqB-84-Gj2"/>
                         <barButtonItem key="rightBarButtonItem" title="Volgende" id="nLZ-zH-gug">
                             <connections>
                                 <segue destination="ZD4-1W-SBE" kind="push" id="4xC-zr-K7Y"/>
@@ -247,7 +247,7 @@
                                 </date>
                                 <locale key="locale" localeIdentifier="en_US"/>
                                 <timeZone key="timeZone" name="America/Los_Angeles">
-                                    <data key="data">
+                                    <mutableData key="data">
 VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
 y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
 5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
@@ -265,7 +265,7 @@ f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
-</data>
+</mutableData>
                                 </timeZone>
                             </datePicker>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Wanneer afhalen?" lineBreakMode="tailTruncation" minimumFontSize="10" id="nHH-74-Lzk">
@@ -276,11 +276,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dFU-wz-MxV">
-                                <rect key="frame" x="20" y="290" width="280" height="37"/>
+                                <rect key="frame" x="20" y="287" width="280" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Bevestig">
-                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -466,8 +466,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </scene>
     </scenes>
     <resources>
+        <image name="bestellingtest2.png" width="22" height="26"/>
         <image name="gear.png" width="30" height="30"/>
-        <image name="lijstje.png" width="22" height="26"/>
         <image name="mandje.png" width="30" height="29"/>
     </resources>
     <classes>
