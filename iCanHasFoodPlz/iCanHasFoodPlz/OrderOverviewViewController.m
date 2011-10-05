@@ -99,7 +99,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = [[NSString alloc] initWithFormat:@"Order #%i", indexPath.row+1];
+    cell.textLabel.text = [[NSString alloc] initWithFormat:@"Bestelling #%i", indexPath.row+1];
     
     // Configure the cell...
     
