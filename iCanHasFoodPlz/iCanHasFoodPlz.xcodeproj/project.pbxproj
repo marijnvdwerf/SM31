@@ -32,6 +32,8 @@
 		C6A8B4B7142A0EBA00FB2942 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6A8B4B6142A0EBA00FB2942 /* first@2x.png */; };
 		C6A8B4BC142A0EBA00FB2942 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = C6A8B4BB142A0EBA00FB2942 /* second.png */; };
 		C6A8B4BE142A0EBA00FB2942 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6A8B4BD142A0EBA00FB2942 /* second@2x.png */; };
+		C6E5D00E143C7269006412FF /* ShoppingList.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E5D00D143C7269006412FF /* ShoppingList.m */; };
+		C6E5D012143C824A006412FF /* OrderDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E5D011143C824A006412FF /* OrderDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,10 @@
 		C6A8B4B6142A0EBA00FB2942 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		C6A8B4BB142A0EBA00FB2942 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		C6A8B4BD142A0EBA00FB2942 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		C6E5D00C143C7269006412FF /* ShoppingList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingList.h; sourceTree = "<group>"; };
+		C6E5D00D143C7269006412FF /* ShoppingList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingList.m; sourceTree = "<group>"; };
+		C6E5D010143C824A006412FF /* OrderDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderDetailsViewController.h; sourceTree = "<group>"; };
+		C6E5D011143C824A006412FF /* OrderDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,8 @@
 				C62437FE1433421F00B9A7A6 /* OrderOverviewViewController.m */,
 				C62438001433428300B9A7A6 /* ShoppingListsOverviewViewController.h */,
 				C62438011433428300B9A7A6 /* ShoppingListsOverviewViewController.m */,
+				C6E5D010143C824A006412FF /* OrderDetailsViewController.h */,
+				C6E5D011143C824A006412FF /* OrderDetailsViewController.m */,
 			);
 			name = Interface;
 			sourceTree = "<group>";
@@ -154,6 +162,8 @@
 				C6A8B4A0142A0EBA00FB2942 /* Supporting Files */,
 				C62438041433512D00B9A7A6 /* Order.h */,
 				C62438051433512D00B9A7A6 /* Order.m */,
+				C6E5D00C143C7269006412FF /* ShoppingList.h */,
+				C6E5D00D143C7269006412FF /* ShoppingList.m */,
 			);
 			path = iCanHasFoodPlz;
 			sourceTree = "<group>";
@@ -253,6 +263,8 @@
 				C62437FF1433421F00B9A7A6 /* OrderOverviewViewController.m in Sources */,
 				C62438021433428300B9A7A6 /* ShoppingListsOverviewViewController.m in Sources */,
 				C62438061433512D00B9A7A6 /* Order.m in Sources */,
+				C6E5D00E143C7269006412FF /* ShoppingList.m in Sources */,
+				C6E5D012143C824A006412FF /* OrderDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

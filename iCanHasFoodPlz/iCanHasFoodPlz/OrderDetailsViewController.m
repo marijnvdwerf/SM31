@@ -1,21 +1,29 @@
 //
-//  OrderOverviewViewController.m
+//  OrderDetailsViewController.m
 //  iCanHasFoodPlz
 //
-//  Created by Marijn van der Werf on 28-09-11.
+//  Created by Marijn van der Werf on 05-10-11.
 //  Copyright (c) 2011 Fontys Hogeschool ICT. All rights reserved.
 //
 
-#import "OrderOverviewViewController.h"
-#import "Order.h"
+#import "OrderDetailsViewController.h"
 
 
-@implementation OrderOverviewViewController
-@synthesize orders=_orders;
+@implementation OrderDetailsViewController
+@synthesize order = _order;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (id)initWithOrder:(Order *)order
+{
+    self = [super init];
     if (self) {
         // Custom initialization
     }
@@ -35,9 +43,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.orders = [[NSMutableArray alloc] initWithObjects: [Order alloc], nil];
-    
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -83,38 +88,30 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    #warning Potentially incomplete method implementation.
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    #warning Incomplete method implementation.
-    return [self.orders count];
+#warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"OrderOverviewCell";
+    static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = [[NSString alloc] initWithFormat:@"Bestelling #%i", indexPath.row+1];
-    
     // Configure the cell...
     
     return cell;
-}
-
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"ShowOrderDetails"]) {
-        AddDescriptionViewController *addDescriptionViewController = [segue destinationViewController];
-        addDescriptionViewController.delegate = self;
-    }
 }
 
 /*
@@ -157,6 +154,7 @@
 */
 
 #pragma mark - Table view delegate
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.

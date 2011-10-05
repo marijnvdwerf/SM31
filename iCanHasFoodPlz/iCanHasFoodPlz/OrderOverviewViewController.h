@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface OrderOverviewViewController : UITableViewController
+@property (nonatomic, retain) NSMutableArray *orders;
+
 
 @end
