@@ -17,6 +17,7 @@
 		7B280565143C6FA3003F0B0D /* halen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B280563143C6FA3003F0B0D /* halen@2x.png */; };
 		7B280567143C7452003F0B0D /* mandje.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B280566143C7451003F0B0D /* mandje.png */; };
 		7B280569143C7498003F0B0D /* mandje@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B280568143C7498003F0B0D /* mandje@2x.png */; };
+		C6148A94143C9EC300928A3D /* AddOrderItemSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6148A93143C9EC300928A3D /* AddOrderItemSelectionView.m */; };
 		C62437FF1433421F00B9A7A6 /* OrderOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C62437FE1433421F00B9A7A6 /* OrderOverviewViewController.m */; };
 		C62438021433428300B9A7A6 /* ShoppingListsOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C62438011433428300B9A7A6 /* ShoppingListsOverviewViewController.m */; };
 		C62438061433512D00B9A7A6 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = C62438051433512D00B9A7A6 /* Order.m */; };
@@ -32,6 +33,8 @@
 		C6A8B4B7142A0EBA00FB2942 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6A8B4B6142A0EBA00FB2942 /* first@2x.png */; };
 		C6A8B4BC142A0EBA00FB2942 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = C6A8B4BB142A0EBA00FB2942 /* second.png */; };
 		C6A8B4BE142A0EBA00FB2942 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6A8B4BD142A0EBA00FB2942 /* second@2x.png */; };
+		C6E5D00E143C7269006412FF /* ShoppingList.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E5D00D143C7269006412FF /* ShoppingList.m */; };
+		C6E5D012143C824A006412FF /* OrderDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E5D011143C824A006412FF /* OrderDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +48,8 @@
 		7B280563143C6FA3003F0B0D /* halen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "halen@2x.png"; sourceTree = "<group>"; };
 		7B280566143C7451003F0B0D /* mandje.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mandje.png; sourceTree = "<group>"; };
 		7B280568143C7498003F0B0D /* mandje@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mandje@2x.png"; sourceTree = "<group>"; };
+		C6148A92143C9EC300928A3D /* AddOrderItemSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddOrderItemSelectionView.h; sourceTree = "<group>"; };
+		C6148A93143C9EC300928A3D /* AddOrderItemSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddOrderItemSelectionView.m; sourceTree = "<group>"; };
 		C62437FD1433421F00B9A7A6 /* OrderOverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderOverviewViewController.h; sourceTree = "<group>"; };
 		C62437FE1433421F00B9A7A6 /* OrderOverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderOverviewViewController.m; sourceTree = "<group>"; };
 		C62438001433428300B9A7A6 /* ShoppingListsOverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingListsOverviewViewController.h; sourceTree = "<group>"; };
@@ -67,6 +72,10 @@
 		C6A8B4B6142A0EBA00FB2942 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		C6A8B4BB142A0EBA00FB2942 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		C6A8B4BD142A0EBA00FB2942 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		C6E5D00C143C7269006412FF /* ShoppingList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingList.h; sourceTree = "<group>"; };
+		C6E5D00D143C7269006412FF /* ShoppingList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingList.m; sourceTree = "<group>"; };
+		C6E5D010143C824A006412FF /* OrderDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderDetailsViewController.h; sourceTree = "<group>"; };
+		C6E5D011143C824A006412FF /* OrderDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +123,10 @@
 				C62437FE1433421F00B9A7A6 /* OrderOverviewViewController.m */,
 				C62438001433428300B9A7A6 /* ShoppingListsOverviewViewController.h */,
 				C62438011433428300B9A7A6 /* ShoppingListsOverviewViewController.m */,
+				C6E5D010143C824A006412FF /* OrderDetailsViewController.h */,
+				C6E5D011143C824A006412FF /* OrderDetailsViewController.m */,
+				C6148A92143C9EC300928A3D /* AddOrderItemSelectionView.h */,
+				C6148A93143C9EC300928A3D /* AddOrderItemSelectionView.m */,
 			);
 			name = Interface;
 			sourceTree = "<group>";
@@ -154,6 +167,8 @@
 				C6A8B4A0142A0EBA00FB2942 /* Supporting Files */,
 				C62438041433512D00B9A7A6 /* Order.h */,
 				C62438051433512D00B9A7A6 /* Order.m */,
+				C6E5D00C143C7269006412FF /* ShoppingList.h */,
+				C6E5D00D143C7269006412FF /* ShoppingList.m */,
 			);
 			path = iCanHasFoodPlz;
 			sourceTree = "<group>";
@@ -253,6 +268,9 @@
 				C62437FF1433421F00B9A7A6 /* OrderOverviewViewController.m in Sources */,
 				C62438021433428300B9A7A6 /* ShoppingListsOverviewViewController.m in Sources */,
 				C62438061433512D00B9A7A6 /* Order.m in Sources */,
+				C6E5D00E143C7269006412FF /* ShoppingList.m in Sources */,
+				C6E5D012143C824A006412FF /* OrderDetailsViewController.m in Sources */,
+				C6148A94143C9EC300928A3D /* AddOrderItemSelectionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

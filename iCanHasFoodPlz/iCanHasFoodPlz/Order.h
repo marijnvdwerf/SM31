@@ -17,8 +17,9 @@
 @property (nonatomic) Boolean volunteerForShopping;
 @property (nonatomic, retain) NSArray *items;
 
-- (Boolean) uploaded;
+- (Boolean) isUploaded;
 - (void) sendToServer;
+- (float) totalPrice;
 
 
 @end

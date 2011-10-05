@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1934" systemVersion="11B26" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11B26" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="931"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
     </dependencies>
     <scenes>
         <scene sceneID="D3y-af-yC2">
@@ -86,7 +86,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="BWn-q4-jeg" kind="push" id="puw-Yl-Vmw"/>
+                                    <segue destination="BWn-q4-jeg" kind="push" identifier="ShowOrderDetails" id="puw-Yl-Vmw"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -124,7 +124,7 @@
         <scene sceneID="E2F-nF-hPT">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2uq-aU-GrZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController title="Nieuwe bestelling" id="Kzo-7A-Ebg" sceneMemberID="viewController">
+                <tableViewController title="Nieuwe bestelling" id="Kzo-7A-Ebg" customClass="AddOrderItemSelectionView" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="A6K-kt-uu2">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -146,7 +146,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Bestelling" id="qyM-82-NCV">
-                        <barButtonItem key="leftBarButtonItem" title="Annuleer" id="eqB-84-Gj2"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="eqB-84-Gj2">
+                            <connections>
+                                <action selector="cancel:" destination="Kzo-7A-Ebg" id="LI9-0e-nhq"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Volgende" id="nLZ-zH-gug">
                             <connections>
                                 <segue destination="ZD4-1W-SBE" kind="push" id="4xC-zr-K7Y"/>
@@ -247,7 +251,7 @@
                                 </date>
                                 <locale key="locale" localeIdentifier="en_US"/>
                                 <timeZone key="timeZone" name="America/Los_Angeles">
-                                    <mutableData key="data">
+                                    <data key="data">
 VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
 y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
 5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
@@ -265,7 +269,7 @@ f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
-</mutableData>
+</data>
                                 </timeZone>
                             </datePicker>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Wanneer afhalen?" lineBreakMode="tailTruncation" minimumFontSize="10" id="nHH-74-Lzk">
@@ -298,7 +302,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <scene sceneID="tzv-gK-hpk">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wB6-hj-O8R" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="BWn-q4-jeg" sceneMemberID="viewController">
+                <viewController id="BWn-q4-jeg" customClass="OrderDetailsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dTg-7Y-Uqy">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -346,6 +350,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Details bestelling" id="2kv-bK-4Se"/>
+                    <connections>
+                        <outlet property="totalPriceLabel" destination="30g-LW-ewy" id="lJV-e2-ZhW"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1637" y="-524"/>
@@ -470,14 +477,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="gear.png" width="30" height="30"/>
         <image name="mandje.png" width="30" height="29"/>
     </resources>
-    <classes>
-        <class className="OrderOverviewViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/OrderOverviewViewController.h"/>
-        </class>
-        <class className="ShoppingListsOverviewViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ShoppingListsOverviewViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

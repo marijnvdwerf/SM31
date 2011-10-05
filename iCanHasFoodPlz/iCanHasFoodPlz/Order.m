@@ -9,11 +9,36 @@
 #import "Order.h"
 
 @implementation Order
-@synthesize lastEdited=_lastEdited;
-@synthesize deliveryTarget=_deliveryTarget;
-@synthesize lastUploaded=_lastUploaded;
-@synthesize hasBeenPayed=_hasBeenPayed;
-@synthesize volunteerForShopping=_volunteerForShopping;
-@synthesize items=_items;
+@synthesize lastEdited=_lastEdited,
+            deliveryTarget=_deliveryTarget,
+            lastUploaded=_lastUploaded,
+            hasBeenPayed=_hasBeenPayed,
+            volunteerForShopping=_volunteerForShopping,
+            items=_items;
+
+
+- (Boolean) isUploaded {
+    /*NSComparisonResult *result = [self.lastUploaded compare:self.lastEdited];
+    if(result == NSOrderedDescendingscom) {
+        NSLog(@"Meeste recente versie is geupload");
+        return YES;
+    } else {
+        NSLog(@"De laatste versie staat nog niet online");
+        return NO;
+    }*/
+    return YES;
+}
+
+
+- (void) sendToServer {
+    self.lastUploaded = [[NSDate alloc] initWithTimeIntervalSinceNow: 0];
+    
+    NSLog(@"Geüpload op %@", [self.lastUploaded description]);
+}
+
+- (float) totalPrice {
+    NSLog(@"Prijs");
+    return 12.54;
+}
 
 @end
