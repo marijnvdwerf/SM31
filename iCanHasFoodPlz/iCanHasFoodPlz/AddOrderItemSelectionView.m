@@ -1,18 +1,24 @@
 //
-//  OrderDetailsViewController.m
+//  AddOrderItemSelectionView.m
 //  iCanHasFoodPlz
 //
 //  Created by Marijn van der Werf on 05-10-11.
 //  Copyright (c) 2011 Fontys Hogeschool ICT. All rights reserved.
 //
 
-#import "OrderDetailsViewController.h"
+#import "AddOrderItemSelectionView.h"
 
 
-@implementation OrderDetailsViewController
-@synthesize order = _order;
-@synthesize totalPriceLabel = _totalPriceLabel;
+@implementation AddOrderItemSelectionView
 
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -33,16 +39,10 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    //self.order = [Order alloc];
-    [self.order sendToServer];
-    self.totalPriceLabel.text = [[NSString alloc] initWithFormat:@"€ %f", self.order.totalPrice];
-    
 }
 
 - (void)viewDidUnload
 {
-    [self setTotalPriceLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -154,6 +154,10 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+- (IBAction)cancel:(id)sender {
+    [[self parentViewController] dismissModalViewControllerAnimated:TRUE];
 }
 
 @end

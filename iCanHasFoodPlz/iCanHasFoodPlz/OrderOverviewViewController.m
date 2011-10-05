@@ -8,6 +8,7 @@
 
 #import "OrderOverviewViewController.h"
 #import "Order.h"
+#import "OrderDetailsViewController.h"
 
 
 @implementation OrderOverviewViewController
@@ -112,8 +113,8 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"ShowOrderDetails"]) {
-        AddDescriptionViewController *addDescriptionViewController = [segue destinationViewController];
-        addDescriptionViewController.delegate = self;
+        OrderDetailsViewController *detailsView = [segue destinationViewController];
+        detailsView.order = [Order alloc];
     }
 }
 

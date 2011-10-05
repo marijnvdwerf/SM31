@@ -18,14 +18,15 @@
 
 
 - (Boolean) isUploaded {
-    NSComparisonResult *result = [self.lastUploaded compare:self.lastEdited];
-    if(result == NSOrderedDescending) {
+    /*NSComparisonResult *result = [self.lastUploaded compare:self.lastEdited];
+    if(result == NSOrderedDescendingscom) {
         NSLog(@"Meeste recente versie is geupload");
         return YES;
     } else {
         NSLog(@"De laatste versie staat nog niet online");
         return NO;
-    }
+    }*/
+    return YES;
 }
 
 
@@ -36,6 +37,7 @@
 }
 
 - (float) totalPrice {
+    NSLog(@"Prijs");
     return 12.54;
 }
 

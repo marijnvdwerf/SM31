@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "Order.h"
 
-@interface OrderDetailsViewController : UITableViewController
+@interface OrderDetailsViewController : UIViewController
 
 @property (nonatomic, retain) Order *order;
+@property (weak, nonatomic) IBOutlet UILabel *totalPriceLabel;
 
 - (id) initWithOrder:(Order *)order;
 
