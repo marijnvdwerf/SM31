@@ -34,9 +34,12 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    //self.order = [Order alloc];
-    [self.order sendToServer];
-    self.totalPriceLabel.text = [[NSString alloc] initWithFormat:@"€ %f", self.order.totalPrice];
+    
+    // Total price label
+    NSNumberFormatter *priceFormatter = [[NSNumberFormatter alloc] init];
+    priceFormatter.numberStyle = NSNumberFormatterCurrencyStyle;
+    NSString *formattedPriceString = [priceFormatter stringFromNumber:[NSNumber numberWithFloat:self.order.totalPrice]];    
+    self.totalPriceLabel.text = formattedPriceString;
     
 }
 
