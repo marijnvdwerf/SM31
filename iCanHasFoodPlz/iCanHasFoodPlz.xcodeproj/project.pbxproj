@@ -29,10 +29,6 @@
 		C6A8B4AA142A0EBA00FB2942 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A8B4A9142A0EBA00FB2942 /* AppDelegate.m */; };
 		C6A8B4AD142A0EBA00FB2942 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6A8B4AB142A0EBA00FB2942 /* MainStoryboard_iPhone.storyboard */; };
 		C6A8B4B0142A0EBA00FB2942 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6A8B4AE142A0EBA00FB2942 /* MainStoryboard_iPad.storyboard */; };
-		C6A8B4B5142A0EBA00FB2942 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = C6A8B4B4142A0EBA00FB2942 /* first.png */; };
-		C6A8B4B7142A0EBA00FB2942 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6A8B4B6142A0EBA00FB2942 /* first@2x.png */; };
-		C6A8B4BC142A0EBA00FB2942 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = C6A8B4BB142A0EBA00FB2942 /* second.png */; };
-		C6A8B4BE142A0EBA00FB2942 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6A8B4BD142A0EBA00FB2942 /* second@2x.png */; };
 		C6E5D00E143C7269006412FF /* ShoppingList.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E5D00D143C7269006412FF /* ShoppingList.m */; };
 		C6E5D012143C824A006412FF /* OrderDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E5D011143C824A006412FF /* OrderDetailsViewController.m */; };
 /* End PBXBuildFile section */
@@ -68,10 +64,6 @@
 		C6A8B4A9142A0EBA00FB2942 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C6A8B4AC142A0EBA00FB2942 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		C6A8B4AF142A0EBA00FB2942 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		C6A8B4B4142A0EBA00FB2942 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		C6A8B4B6142A0EBA00FB2942 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		C6A8B4BB142A0EBA00FB2942 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		C6A8B4BD142A0EBA00FB2942 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		C6E5D00C143C7269006412FF /* ShoppingList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingList.h; sourceTree = "<group>"; };
 		C6E5D00D143C7269006412FF /* ShoppingList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingList.m; sourceTree = "<group>"; };
 		C6E5D010143C824A006412FF /* OrderDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderDetailsViewController.h; sourceTree = "<group>"; };
@@ -113,10 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				7B280551143C5F7C003F0B0D /* images */,
-				C6A8B4B4142A0EBA00FB2942 /* first.png */,
-				C6A8B4B6142A0EBA00FB2942 /* first@2x.png */,
-				C6A8B4BB142A0EBA00FB2942 /* second.png */,
-				C6A8B4BD142A0EBA00FB2942 /* second@2x.png */,
 				C6A8B4AB142A0EBA00FB2942 /* MainStoryboard_iPhone.storyboard */,
 				C6A8B4AE142A0EBA00FB2942 /* MainStoryboard_iPad.storyboard */,
 				C62437FD1433421F00B9A7A6 /* OrderOverviewViewController.h */,
@@ -239,10 +227,6 @@
 				C6A8B4A4142A0EBA00FB2942 /* InfoPlist.strings in Resources */,
 				C6A8B4AD142A0EBA00FB2942 /* MainStoryboard_iPhone.storyboard in Resources */,
 				C6A8B4B0142A0EBA00FB2942 /* MainStoryboard_iPad.storyboard in Resources */,
-				C6A8B4B5142A0EBA00FB2942 /* first.png in Resources */,
-				C6A8B4B7142A0EBA00FB2942 /* first@2x.png in Resources */,
-				C6A8B4BC142A0EBA00FB2942 /* second.png in Resources */,
-				C6A8B4BE142A0EBA00FB2942 /* second@2x.png in Resources */,
 				7B280558143C6381003F0B0D /* bestelling.png in Resources */,
 				7B280559143C6381003F0B0D /* bestelling@2x.png in Resources */,
 				7B28055C143C650A003F0B0D /* bestellingtest2.png in Resources */,
