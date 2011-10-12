@@ -17,6 +17,8 @@
 		7B280565143C6FA3003F0B0D /* halen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B280563143C6FA3003F0B0D /* halen@2x.png */; };
 		7B280567143C7452003F0B0D /* mandje.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B280566143C7451003F0B0D /* mandje.png */; };
 		7B280569143C7498003F0B0D /* mandje@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B280568143C7498003F0B0D /* mandje@2x.png */; };
+		7B58F17F1445C6B900A9772A /* AddOrderTimeSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B58F17E1445C6B900A9772A /* AddOrderTimeSelectionView.m */; };
+		7B58F18E1445D46000A9772A /* AddOrderOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B58F18D1445D46000A9772A /* AddOrderOverviewViewController.m */; };
 		C6148A94143C9EC300928A3D /* AddOrderItemSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6148A93143C9EC300928A3D /* AddOrderItemSelectionView.m */; };
 		C62437FF1433421F00B9A7A6 /* OrderOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C62437FE1433421F00B9A7A6 /* OrderOverviewViewController.m */; };
 		C62438021433428300B9A7A6 /* ShoppingListsOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C62438011433428300B9A7A6 /* ShoppingListsOverviewViewController.m */; };
@@ -44,6 +46,10 @@
 		7B280563143C6FA3003F0B0D /* halen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "halen@2x.png"; sourceTree = "<group>"; };
 		7B280566143C7451003F0B0D /* mandje.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mandje.png; sourceTree = "<group>"; };
 		7B280568143C7498003F0B0D /* mandje@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mandje@2x.png"; sourceTree = "<group>"; };
+		7B58F17D1445C6B900A9772A /* AddOrderTimeSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddOrderTimeSelectionView.h; sourceTree = "<group>"; };
+		7B58F17E1445C6B900A9772A /* AddOrderTimeSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddOrderTimeSelectionView.m; sourceTree = "<group>"; };
+		7B58F18C1445D46000A9772A /* AddOrderOverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddOrderOverviewViewController.h; sourceTree = "<group>"; };
+		7B58F18D1445D46000A9772A /* AddOrderOverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddOrderOverviewViewController.m; sourceTree = "<group>"; };
 		C6148A92143C9EC300928A3D /* AddOrderItemSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddOrderItemSelectionView.h; sourceTree = "<group>"; };
 		C6148A93143C9EC300928A3D /* AddOrderItemSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddOrderItemSelectionView.m; sourceTree = "<group>"; };
 		C62437FD1433421F00B9A7A6 /* OrderOverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderOverviewViewController.h; sourceTree = "<group>"; };
@@ -115,6 +121,10 @@
 				C6E5D011143C824A006412FF /* OrderDetailsViewController.m */,
 				C6148A92143C9EC300928A3D /* AddOrderItemSelectionView.h */,
 				C6148A93143C9EC300928A3D /* AddOrderItemSelectionView.m */,
+				7B58F17D1445C6B900A9772A /* AddOrderTimeSelectionView.h */,
+				7B58F17E1445C6B900A9772A /* AddOrderTimeSelectionView.m */,
+				7B58F18C1445D46000A9772A /* AddOrderOverviewViewController.h */,
+				7B58F18D1445D46000A9772A /* AddOrderOverviewViewController.m */,
 			);
 			name = Interface;
 			sourceTree = "<group>";
@@ -255,6 +265,8 @@
 				C6E5D00E143C7269006412FF /* ShoppingList.m in Sources */,
 				C6E5D012143C824A006412FF /* OrderDetailsViewController.m in Sources */,
 				C6148A94143C9EC300928A3D /* AddOrderItemSelectionView.m in Sources */,
+				7B58F17F1445C6B900A9772A /* AddOrderTimeSelectionView.m in Sources */,
+				7B58F18E1445D46000A9772A /* AddOrderOverviewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
