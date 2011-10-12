@@ -12,8 +12,7 @@
 @interface OrderDetailsViewController : UIViewController
 
 @property (nonatomic, retain) Order *order;
-@property (weak, nonatomic) IBOutlet UILabel *totalPriceLabel;
 
-- (id) initWithOrder:(Order *)order;
+@property (weak, nonatomic) IBOutlet UILabel *totalPriceLabel;
 
 @end
