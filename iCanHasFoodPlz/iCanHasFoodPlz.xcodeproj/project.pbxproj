@@ -17,6 +17,8 @@
 		7B280565143C6FA3003F0B0D /* halen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B280563143C6FA3003F0B0D /* halen@2x.png */; };
 		7B280567143C7452003F0B0D /* mandje.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B280566143C7451003F0B0D /* mandje.png */; };
 		7B280569143C7498003F0B0D /* mandje@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B280568143C7498003F0B0D /* mandje@2x.png */; };
+		7B58F17F1445C6B900A9772A /* AddOrderTimeSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B58F17E1445C6B900A9772A /* AddOrderTimeSelectionView.m */; };
+		7B58F18E1445D46000A9772A /* AddOrderOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B58F18D1445D46000A9772A /* AddOrderOverviewViewController.m */; };
 		C6148A94143C9EC300928A3D /* AddOrderItemSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6148A93143C9EC300928A3D /* AddOrderItemSelectionView.m */; };
 		C62437FF1433421F00B9A7A6 /* OrderOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C62437FE1433421F00B9A7A6 /* OrderOverviewViewController.m */; };
 		C62438021433428300B9A7A6 /* ShoppingListsOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C62438011433428300B9A7A6 /* ShoppingListsOverviewViewController.m */; };
@@ -63,6 +65,10 @@
 		7B280563143C6FA3003F0B0D /* halen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "halen@2x.png"; sourceTree = "<group>"; };
 		7B280566143C7451003F0B0D /* mandje.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mandje.png; sourceTree = "<group>"; };
 		7B280568143C7498003F0B0D /* mandje@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mandje@2x.png"; sourceTree = "<group>"; };
+		7B58F17D1445C6B900A9772A /* AddOrderTimeSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddOrderTimeSelectionView.h; sourceTree = "<group>"; };
+		7B58F17E1445C6B900A9772A /* AddOrderTimeSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddOrderTimeSelectionView.m; sourceTree = "<group>"; };
+		7B58F18C1445D46000A9772A /* AddOrderOverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddOrderOverviewViewController.h; sourceTree = "<group>"; };
+		7B58F18D1445D46000A9772A /* AddOrderOverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddOrderOverviewViewController.m; sourceTree = "<group>"; };
 		C6148A92143C9EC300928A3D /* AddOrderItemSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddOrderItemSelectionView.h; sourceTree = "<group>"; };
 		C6148A93143C9EC300928A3D /* AddOrderItemSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddOrderItemSelectionView.m; sourceTree = "<group>"; };
 		C62437FD1433421F00B9A7A6 /* OrderOverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderOverviewViewController.h; sourceTree = "<group>"; };
@@ -160,10 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				7B280551143C5F7C003F0B0D /* images */,
-				C6A8B4B4142A0EBA00FB2942 /* first.png */,
-				C6A8B4B6142A0EBA00FB2942 /* first@2x.png */,
-				C6A8B4BB142A0EBA00FB2942 /* second.png */,
-				C6A8B4BD142A0EBA00FB2942 /* second@2x.png */,
 				C6A8B4AB142A0EBA00FB2942 /* MainStoryboard_iPhone.storyboard */,
 				C6A8B4AE142A0EBA00FB2942 /* MainStoryboard_iPad.storyboard */,
 				C62437FD1433421F00B9A7A6 /* OrderOverviewViewController.h */,
@@ -174,6 +176,10 @@
 				C6E5D011143C824A006412FF /* OrderDetailsViewController.m */,
 				C6148A92143C9EC300928A3D /* AddOrderItemSelectionView.h */,
 				C6148A93143C9EC300928A3D /* AddOrderItemSelectionView.m */,
+				7B58F17D1445C6B900A9772A /* AddOrderTimeSelectionView.h */,
+				7B58F17E1445C6B900A9772A /* AddOrderTimeSelectionView.m */,
+				7B58F18C1445D46000A9772A /* AddOrderOverviewViewController.h */,
+				7B58F18D1445D46000A9772A /* AddOrderOverviewViewController.m */,
 			);
 			name = Interface;
 			sourceTree = "<group>";
@@ -322,10 +328,6 @@
 				C6A8B4A4142A0EBA00FB2942 /* InfoPlist.strings in Resources */,
 				C6A8B4AD142A0EBA00FB2942 /* MainStoryboard_iPhone.storyboard in Resources */,
 				C6A8B4B0142A0EBA00FB2942 /* MainStoryboard_iPad.storyboard in Resources */,
-				C6A8B4B5142A0EBA00FB2942 /* first.png in Resources */,
-				C6A8B4B7142A0EBA00FB2942 /* first@2x.png in Resources */,
-				C6A8B4BC142A0EBA00FB2942 /* second.png in Resources */,
-				C6A8B4BE142A0EBA00FB2942 /* second@2x.png in Resources */,
 				7B280558143C6381003F0B0D /* bestelling.png in Resources */,
 				7B280559143C6381003F0B0D /* bestelling@2x.png in Resources */,
 				7B28055C143C650A003F0B0D /* bestellingtest2.png in Resources */,
@@ -365,6 +367,8 @@
 				C64C69B214458FD200091A3C /* ASIInputStream.m in Sources */,
 				C64C69B314458FD200091A3C /* ASINetworkQueue.m in Sources */,
 				C625669B1445B7A5008DE470 /* Reachability.m in Sources */,
+				7B58F17F1445C6B900A9772A /* AddOrderTimeSelectionView.m in Sources */,
+				7B58F18E1445D46000A9772A /* AddOrderOverviewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
