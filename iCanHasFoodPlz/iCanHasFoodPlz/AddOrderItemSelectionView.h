@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Order.h"
 
 @interface AddOrderItemSelectionView : UITableViewController
+
+@property (nonatomic, retain) NSDictionary *items;
+@property (nonatomic, retain) Order *order;
 
 - (IBAction)cancel:(id)sender;
 

@@ -7,9 +7,12 @@
 //
 
 #import "AddOrderItemSelectionView.h"
+#import "ASIHTTPRequest.h"
 
 
 @implementation AddOrderItemSelectionView
+
+@synthesize items=_items, order=_order;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -39,6 +42,15 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
+    
+    NSURL *url = [[NSURL alloc] initWithString:@"http://school.navale.nl/p5/icanhasfood/items.php"];
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    [request setDelegate:self];
+    [request startAsynchronous];
+    
+    self.order = [[Order alloc] init];
 }
 
 - (void)viewDidUnload
@@ -74,34 +86,73 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+#pragma mark urlrequest
+
+- (void)requestFinished:(ASIHTTPRequest *)request
+{
+    NSDictionary *jsonSerialization = [NSJSONSerialization JSONObjectWithData:[request responseData] options:nil error:nil];
+    self.items = jsonSerialization;
+    
+    self.tableView.reloadData;
+}
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return [self.items count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+    #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    
+    /* Create the dictionary. */
+    
+    NSArray *keys = [self.items allKeys];
+    id aKey = [keys objectAtIndex:section];
+    NSDictionary *sectionItems = [self.items objectForKey:aKey];
+    
+    return [sectionItems count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"orderItemSelectionCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+    NSArray *categories = [self.items allKeys];
+    id aKey = [categories objectAtIndex:indexPath.section];
+    NSArray *sectionItems = [self.items objectForKey:aKey];
+    
+    NSDictionary *itemRow = [sectionItems objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = [itemRow objectForKey:@"name"];
+    
+    if([self.order isItemOrdered:[itemRow objectForKey:@"id"]]) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
     // Configure the cell...
     
     return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSArray *keys = [self.items allKeys];
+    NSString *title = [keys objectAtIndex:section];
+    return title;
 }
 
 /*
@@ -147,13 +198,24 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    NSArray *categories = [self.items allKeys];
+    id aKey = [categories objectAtIndex:indexPath.section];
+    NSArray *sectionItems = [self.items objectForKey:aKey];
+    
+    NSDictionary *itemRow = [sectionItems objectAtIndex:indexPath.row];
+    
+    if([self.order isItemOrdered:(NSInteger)[itemRow objectForKey:@"id"]]) {
+        // Remove item from order
+        [self.order removeItem:(NSInteger)[itemRow objectForKey:@"id"]];
+        [[tableView cellForRowAtIndexPath:indexPath] setAccessoryType:UITableViewCellAccessoryNone];
+    } else {
+        // Add item to order
+        [self.order addItem:(NSInteger)[itemRow objectForKey:@"id"]];
+        [[tableView cellForRowAtIndexPath:indexPath] setAccessoryType:UITableViewCellAccessoryCheckmark];
+    }
+    
+    //self.order
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (IBAction)cancel:(id)sender {

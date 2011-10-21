@@ -15,11 +15,15 @@
 @property (nonatomic, retain) NSDate *lastUploaded;
 @property (nonatomic) Boolean hasBeenPayed;
 @property (nonatomic) Boolean volunteerForShopping;
-@property (nonatomic, retain) NSArray *items;
+@property (nonatomic, retain) NSMutableDictionary *items;
 
 - (Boolean) isUploaded;
 - (void) sendToServer;
 - (float) totalPrice;
+
+- (void) addItem: (NSInteger) itemId;
+- (void) removeItem: (NSInteger) itemId;
+- (Boolean) isItemOrdered: (NSInteger) itemId;
 
 
 @end
