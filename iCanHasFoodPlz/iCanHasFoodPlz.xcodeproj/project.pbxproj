@@ -46,8 +46,6 @@
 		C6A8B4AA142A0EBA00FB2942 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A8B4A9142A0EBA00FB2942 /* AppDelegate.m */; };
 		C6A8B4AD142A0EBA00FB2942 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6A8B4AB142A0EBA00FB2942 /* MainStoryboard_iPhone.storyboard */; };
 		C6A8B4B0142A0EBA00FB2942 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6A8B4AE142A0EBA00FB2942 /* MainStoryboard_iPad.storyboard */; };
-		C6E1E4321451944800AF96F9 /* appIconICanHas2-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C6E1E4311451944800AF96F9 /* appIconICanHas2-01.png */; };
-		C6E1E4351451944C00AF96F9 /* appIconICanHas-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C6E1E4341451944C00AF96F9 /* appIconICanHas-01.png */; };
 		C6E5D00E143C7269006412FF /* ShoppingList.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E5D00D143C7269006412FF /* ShoppingList.m */; };
 		C6E5D012143C824A006412FF /* OrderDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E5D011143C824A006412FF /* OrderDetailsViewController.m */; };
 /* End PBXBuildFile section */
@@ -67,8 +65,8 @@
 		7B58F17E1445C6B900A9772A /* AddOrderTimeSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddOrderTimeSelectionView.m; sourceTree = "<group>"; };
 		7B58F18C1445D46000A9772A /* AddOrderOverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddOrderOverviewViewController.h; sourceTree = "<group>"; };
 		7B58F18D1445D46000A9772A /* AddOrderOverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddOrderOverviewViewController.m; sourceTree = "<group>"; };
-		7BDB4C841452D97B00F8109A /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		7BDB4C871452D98700F8109A /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		7BDB4C841452D97B00F8109A /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
+		7BDB4C871452D98700F8109A /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../icon@2x.png"; sourceTree = "<group>"; };
 		C6148A92143C9EC300928A3D /* AddOrderItemSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddOrderItemSelectionView.h; sourceTree = "<group>"; };
 		C6148A93143C9EC300928A3D /* AddOrderItemSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddOrderItemSelectionView.m; sourceTree = "<group>"; };
 		C62437FD1433421F00B9A7A6 /* OrderOverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderOverviewViewController.h; sourceTree = "<group>"; };
@@ -115,8 +113,6 @@
 		C6A8B4A9142A0EBA00FB2942 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C6A8B4AC142A0EBA00FB2942 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		C6A8B4AF142A0EBA00FB2942 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		C6E1E4311451944800AF96F9 /* appIconICanHas2-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appIconICanHas2-01.png"; sourceTree = "<group>"; };
-		C6E1E4341451944C00AF96F9 /* appIconICanHas-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appIconICanHas-01.png"; sourceTree = "<group>"; };
 		C6E5D00C143C7269006412FF /* ShoppingList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingList.h; sourceTree = "<group>"; };
 		C6E5D00D143C7269006412FF /* ShoppingList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingList.m; sourceTree = "<group>"; };
 		C6E5D010143C824A006412FF /* OrderDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderDetailsViewController.h; sourceTree = "<group>"; };
@@ -144,6 +140,8 @@
 		7B280551143C5F7C003F0B0D /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7BDB4C871452D98700F8109A /* icon@2x.png */,
+				7BDB4C841452D97B00F8109A /* icon.png */,
 				7B280568143C7498003F0B0D /* mandje@2x.png */,
 				7B280566143C7451003F0B0D /* mandje.png */,
 				7B280562143C6FA3003F0B0D /* halen.png */,
@@ -212,10 +210,6 @@
 		C6A8B48A142A0EBA00FB2942 = {
 			isa = PBXGroup;
 			children = (
-				7BDB4C871452D98700F8109A /* icon@2x.png */,
-				7BDB4C841452D97B00F8109A /* icon.png */,
-				C6E1E4341451944C00AF96F9 /* appIconICanHas-01.png */,
-				C6E1E4311451944800AF96F9 /* appIconICanHas2-01.png */,
 				C63084361445BF7D0005063F /* SystemConfiguration.framework */,
 				C63084331445BF660005063F /* MobileCoreServices.framework */,
 				C64C69B61445901200091A3C /* libz.dylib */,
@@ -336,8 +330,6 @@
 				7B280565143C6FA3003F0B0D /* halen@2x.png in Resources */,
 				7B280567143C7452003F0B0D /* mandje.png in Resources */,
 				7B280569143C7498003F0B0D /* mandje@2x.png in Resources */,
-				C6E1E4321451944800AF96F9 /* appIconICanHas2-01.png in Resources */,
-				C6E1E4351451944C00AF96F9 /* appIconICanHas-01.png in Resources */,
 				7BDB4C851452D97B00F8109A /* icon.png in Resources */,
 				7BDB4C881452D98700F8109A /* icon@2x.png in Resources */,
 			);
