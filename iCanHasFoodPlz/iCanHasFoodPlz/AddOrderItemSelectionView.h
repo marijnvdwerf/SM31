@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "Order.h"
+#import "PullRefreshTableViewController.h"
 
-@interface AddOrderItemSelectionView : UITableViewController
+@interface AddOrderItemSelectionView : PullRefreshTableViewController
 
 @property (nonatomic, retain) NSDictionary *items;
 @property (nonatomic, retain) Order *order;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *nextButton;
 
 - (IBAction)cancel:(id)sender;
+- (void)parseItemDictionary:(NSDictionary*)itemDictionary;
 
 @end

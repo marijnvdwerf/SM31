@@ -8,9 +8,11 @@
 
 #import "AddOrderItemSelectionView.h"
 #import "ASIHTTPRequest.h"
+#import "PullRefreshTableViewController.h"
 
 
 @implementation AddOrderItemSelectionView
+@synthesize nextButton = _nextButton;
 
 @synthesize items=_items, order=_order;
 
@@ -44,17 +46,23 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     
+       
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    cachePath = [cachePath stringByAppendingPathComponent:@"items.plist"];
+    NSDictionary *items = nil;
     
-    NSURL *url = [[NSURL alloc] initWithString:@"http://school.navale.nl/p5/icanhasfood/items.php"];
-    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
-    [request setDelegate:self];
-    [request startAsynchronous];
+    if(items == nil) {
+        [self startLoading];
+    } else {
+        [self parseItemDictionary:items];
+    }
     
     self.order = [[Order alloc] init];
 }
 
 - (void)viewDidUnload
 {
+    [self setNextButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -85,17 +93,6 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-
-#pragma mark urlrequest
-
-- (void)requestFinished:(ASIHTTPRequest *)request
-{
-    NSDictionary *jsonSerialization = [NSJSONSerialization JSONObjectWithData:[request responseData] options:nil error:nil];
-    self.items = jsonSerialization;
-    
-    self.tableView.reloadData;
-}
-
 
 #pragma mark - Table view data source
 
@@ -130,10 +127,13 @@
     }
     
     NSArray *categories = [self.items allKeys];
-    id aKey = [categories objectAtIndex:indexPath.section];
-    NSArray *sectionItems = [self.items objectForKey:aKey];
+    id catKey = [categories objectAtIndex:indexPath.section];
+    NSDictionary *categoryItems = [self.items objectForKey:catKey];
     
-    NSDictionary *itemRow = [sectionItems objectAtIndex:indexPath.row];
+    NSArray *itemIds = [categoryItems allKeys];
+    id itemKey = [itemIds objectAtIndex:indexPath.row];
+    
+    NSDictionary *itemRow = [categoryItems objectForKey:itemKey];
     
     cell.textLabel.text = [itemRow objectForKey:@"name"];
     
@@ -213,6 +213,13 @@
         [self.order addItem:(NSInteger)[itemRow objectForKey:@"id"]];
         [[tableView cellForRowAtIndexPath:indexPath] setAccessoryType:UITableViewCellAccessoryCheckmark];
     }
+    if([self.order.items count] > 0) {
+        // Enable Next button
+        self.nextButton.enabled = YES;
+    } else {
+        // Disable Next button
+        self.nextButton.enabled = NO;
+    }
     
     //self.order
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -220,6 +227,56 @@
 
 - (IBAction)cancel:(id)sender {
     [[self parentViewController] dismissModalViewControllerAnimated:TRUE];
+}
+
+
+#pragma mark - Pull to Refresh
+
+- (void)refresh {
+    NSURL *url = [[NSURL alloc] initWithString:@"http://school.navale.nl/p5/icanhasfood/items.php"];
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    [request setDelegate:self];
+    [request startAsynchronous];
+}
+
+#pragma mark urlrequest
+
+- (void)requestFinished:(ASIHTTPRequest *)request {
+    // Parse returned JSON
+    NSDictionary *jsonSerialization = [NSJSONSerialization JSONObjectWithData:[request responseData] options:nil error:nil];
+    
+    // Cache the dictionary to a plist.
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    cachePath = [cachePath stringByAppendingPathComponent:@"items.plist"];
+    [jsonSerialization writeToFile:cachePath atomically:YES];
+    
+    // Save dictionary to items property
+    [self parseItemDictionary:jsonSerialization];
+    
+    // Stop the pull to refresh spinner
+    [self stopLoading];
+    
+    // Reload table view
+    [self.tableView reloadData];
+}
+
+- (void)parseItemDictionary:(NSDictionary*)itemDictionary {
+    self.items = [[NSMutableDictionary alloc] init];
+    
+    for(NSString *itemId in itemDictionary) {
+        NSDictionary *item = [itemDictionary objectForKey:itemId];
+        
+        NSMutableDictionary *category = [self.items objectForKey:[item objectForKey:@"category"]];
+        
+        if(category == nil) {
+            category = [[NSMutableDictionary alloc] init];
+            [self.items setValue:category forKey:[item objectForKey:@"category"]];
+        }
+        
+        [category setValue:item forKey:itemId];
+        
+    }
+    
 }
 
 @end

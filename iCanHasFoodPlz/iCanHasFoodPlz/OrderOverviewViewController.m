@@ -9,6 +9,7 @@
 #import "OrderOverviewViewController.h"
 #import "Order.h"
 #import "OrderDetailsViewController.h"
+#import "ASIHTTPRequest.h"
 
 
 @implementation OrderOverviewViewController
@@ -37,7 +38,14 @@
 {
     [super viewDidLoad];
     
-    self.orders = [[NSMutableArray alloc] initWithObjects: [Order alloc], nil];
+    
+    
+    NSURL *url = [[NSURL alloc] initWithString:@"http://school.navale.nl/p5/icanhasfood/orders.php"];
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    [request setDelegate:self];
+    [request startAsynchronous];
+    
+    self.orders = [[NSMutableArray alloc] init];
     
 
     // Uncomment the following line to preserve selection between presentations.
@@ -78,6 +86,22 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+#pragma mark urlrequest
+
+- (void)requestFinished:(ASIHTTPRequest *)request
+{
+    NSDictionary *ordersJSON = [NSJSONSerialization JSONObjectWithData:[request responseData] options:nil error:nil];
+    
+    for(NSString *orderKey in ordersJSON) {
+        NSDictionary *orderData = [ordersJSON valueForKey:orderKey];
+        Order *newOrder = [[Order alloc] initWithOrderDictionary:orderData];
+        
+        [self.orders addObject:newOrder];
+    }
+    
+    self.tableView.reloadData;
 }
 
 #pragma mark - Table view data source

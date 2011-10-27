@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11C74" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="931"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
     </dependencies>
     <scenes>
         <scene sceneID="D3y-af-yC2">
@@ -151,12 +151,15 @@
                                 <action selector="cancel:" destination="Kzo-7A-Ebg" id="LI9-0e-nhq"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Volgende" id="nLZ-zH-gug">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Volgende" id="nLZ-zH-gug">
                             <connections>
                                 <segue destination="ZD4-1W-SBE" kind="push" id="4xC-zr-K7Y"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nextButton" destination="nLZ-zH-gug" id="THt-2n-pHJ"/>
+                    </connections>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="1637" y="-1146"/>
@@ -525,6 +528,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddOrderItemSelectionView.h"/>
             <relationships>
                 <relationship kind="action" name="cancel:"/>
+                <relationship kind="outlet" name="nextButton" candidateClass="UIBarButtonItem"/>
             </relationships>
         </class>
         <class className="AddOrderTimeSelectionView" superclassName="UITableViewController">

@@ -17,6 +17,8 @@
 @property (nonatomic) Boolean volunteerForShopping;
 @property (nonatomic, retain) NSMutableDictionary *items;
 
+- (id) initWithOrderDictionary:(NSDictionary*)orderInfo;
+
 - (Boolean) isUploaded;
 - (void) sendToServer;
 - (float) totalPrice;
