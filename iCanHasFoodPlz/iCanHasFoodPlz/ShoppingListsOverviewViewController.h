@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PullRefreshTableViewController.h"
 
-@interface ShoppingListsOverviewViewController : UITableViewController
+@interface ShoppingListsOverviewViewController : PullRefreshTableViewController
 
 @end

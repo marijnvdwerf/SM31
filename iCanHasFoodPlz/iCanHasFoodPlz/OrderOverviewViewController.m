@@ -135,11 +135,15 @@
     return cell;
 }
 
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+#pragma mark - Segue
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
     if ([[segue identifier] isEqualToString:@"ShowOrderDetails"]) {
-        #warning TODO: rijnummer bepalen
         OrderDetailsViewController *detailsView = [segue destinationViewController];
-        detailsView.order = [Order alloc];
+        NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
+        Order * order = [self.orders objectAtIndex:selectedRowIndex.row];
+        detailsView.order = order;
     }
 }
 
@@ -182,16 +186,6 @@
 }
 */
 
-#pragma mark - Table view delegate
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
-}
+
 
 @end

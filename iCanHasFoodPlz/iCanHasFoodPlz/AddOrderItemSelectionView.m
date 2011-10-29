@@ -49,7 +49,7 @@
        
     NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     cachePath = [cachePath stringByAppendingPathComponent:@"items.plist"];
-    NSDictionary *items = nil;
+    NSDictionary *items = [[NSDictionary alloc] initWithContentsOfFile:cachePath];
     
     if(items == nil) {
         [self startLoading];
@@ -128,12 +128,9 @@
     
     NSArray *categories = [self.items allKeys];
     id catKey = [categories objectAtIndex:indexPath.section];
-    NSDictionary *categoryItems = [self.items objectForKey:catKey];
-    
-    NSArray *itemIds = [categoryItems allKeys];
-    id itemKey = [itemIds objectAtIndex:indexPath.row];
-    
-    NSDictionary *itemRow = [categoryItems objectForKey:itemKey];
+    NSArray *categoryItems = [self.items objectForKey:catKey];
+       
+    NSDictionary *itemRow = [categoryItems objectAtIndex:indexPath.row];
     
     cell.textLabel.text = [itemRow objectForKey:@"name"];
     
@@ -266,14 +263,14 @@
     for(NSString *itemId in itemDictionary) {
         NSDictionary *item = [itemDictionary objectForKey:itemId];
         
-        NSMutableDictionary *category = [self.items objectForKey:[item objectForKey:@"category"]];
+        NSMutableArray *category = [self.items objectForKey:[item objectForKey:@"category"]];
         
         if(category == nil) {
-            category = [[NSMutableDictionary alloc] init];
+            category = [[NSMutableArray alloc] init];
             [self.items setValue:category forKey:[item objectForKey:@"category"]];
         }
         
-        [category setValue:item forKey:itemId];
+        [category addObject:item];
         
     }
     

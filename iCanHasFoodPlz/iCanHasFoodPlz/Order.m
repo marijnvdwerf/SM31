@@ -46,10 +46,6 @@
         for (NSDictionary *item in items) {
             [self.items setValue:[NSNumber numberWithInt:1] forKey:[item objectForKey:@"item_id"]];
         }
-        
-
-        
-        self.items = [[NSMutableDictionary alloc] init];
     }
     return(self);
 }
@@ -70,7 +66,6 @@
 }
 
 - (float) totalPrice {
-    NSLog(@"Prijs");
     return 12.54;
 }
 

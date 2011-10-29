@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Order.h"
 
 @interface OrderOverviewViewController : UITableViewController
 @property (nonatomic, retain) NSMutableArray *orders;

@@ -10,7 +10,7 @@
 
 
 @implementation OrderDetailsViewController
-@synthesize order = _order;
+@synthesize order = _order, itemDetails = _itemDetails;
 @synthesize totalPriceLabel = _totalPriceLabel;
 
 
@@ -34,6 +34,10 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    // Load item dicionary form cache
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    cachePath = [cachePath stringByAppendingPathComponent:@"items.plist"];
+    self.itemDetails = [[NSDictionary alloc] initWithContentsOfFile:cachePath];
     
     // Total price label
     NSNumberFormatter *priceFormatter = [[NSNumberFormatter alloc] init];
@@ -53,7 +57,12 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    // Update the view with current data before it is displayed.
     [super viewWillAppear:animated];
+    
+    // Scroll the table view to the top before it appears
+    [self.tableView reloadData];
+    [self.tableView setContentOffset:CGPointZero animated:NO];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -81,16 +90,16 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+    #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+    #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [[self.order items] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -102,6 +111,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+    NSString *rowItemId = [[self.order.items allKeys] objectAtIndex:indexPath.row];
+    NSDictionary *rowItemDetails = [self.itemDetails objectForKey:rowItemId];
+    cell.textLabel.text = [rowItemDetails objectForKey:@"name"];
     // Configure the cell...
     
     return cell;
