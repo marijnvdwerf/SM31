@@ -12,5 +12,6 @@
 @interface AddOrderOverviewViewController : UITableViewController
 
 @property (nonatomic, retain) Order *order;
+@property (nonatomic, retain) NSDictionary *itemInfo;
 
 @end

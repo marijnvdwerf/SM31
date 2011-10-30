@@ -12,7 +12,7 @@
 
 @implementation AddOrderOverviewViewController
 
-@synthesize order = _order;
+@synthesize order = _order, itemInfo = _itemInfo;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -36,6 +36,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    cachePath = [cachePath stringByAppendingPathComponent:@"items.plist"];
+    self.itemInfo = [[NSDictionary alloc] initWithContentsOfFile:cachePath];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -54,6 +58,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self.tableView reloadData];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -81,36 +87,65 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+    #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    NSInteger rows;
+    
+    switch (section) {
+        case 0:
+            // Top section contains a row for each item.
+            rows = [self.order.items count];
+            break;
+        case 1:
+        default:
+            rows = 2;
+            break;
+    }
+    
+    return rows;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    
+    NSString *CellIdentifier = @"Cell";
+    
+    if (indexPath.section == 1 && indexPath.row == 0) {
+        CellIdentifier = @"AddOrderTimeSelectionCell";
+    } else if (indexPath.section == 1 && indexPath.row == 1) {
+        CellIdentifier = @"AddOrderVolunteerCell";
+    }
+    
+    
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+    if(indexPath.section == 0) {
+         // Top section contains a row for each item.
+        NSArray *allItemIds = [self.order.items allKeys];
+        NSDictionary *currentItemInfo = [self.itemInfo objectForKey:[allItemIds objectAtIndex:indexPath.row]];
+        cell.textLabel.text = [currentItemInfo objectForKey:@"name"];
+    }
+    
     // Configure the cell...
     
     return cell;
 }
+#pragma test
 
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
+ 
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
@@ -145,18 +180,5 @@
     return YES;
 }
 */
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
-}
 
 @end

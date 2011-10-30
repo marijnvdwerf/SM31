@@ -9,6 +9,7 @@
 #import "AddOrderItemSelectionView.h"
 #import "ASIHTTPRequest.h"
 #import "PullRefreshTableViewController.h"
+#import "AddOrderOverviewViewController.h"
 
 
 @implementation AddOrderItemSelectionView
@@ -94,6 +95,8 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -152,45 +155,6 @@
     return title;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -222,11 +186,6 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-- (IBAction)cancel:(id)sender {
-    [[self parentViewController] dismissModalViewControllerAnimated:TRUE];
-}
-
-
 #pragma mark - Pull to Refresh
 
 - (void)refresh {
@@ -238,7 +197,8 @@
 
 #pragma mark urlrequest
 
-- (void)requestFinished:(ASIHTTPRequest *)request {
+- (void)requestFinished:(ASIHTTPRequest *)request
+{
     // Parse returned JSON
     NSDictionary *jsonSerialization = [NSJSONSerialization JSONObjectWithData:[request responseData] options:nil error:nil];
     
@@ -257,7 +217,8 @@
     [self.tableView reloadData];
 }
 
-- (void)parseItemDictionary:(NSDictionary*)itemDictionary {
+- (void)parseItemDictionary:(NSDictionary*)itemDictionary
+{
     self.items = [[NSMutableDictionary alloc] init];
     
     for(NSString *itemId in itemDictionary) {
@@ -276,4 +237,19 @@
     
 }
 
+#pragma mark - Segue
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([[segue identifier] isEqualToString:@"AddOrderShowOverview"]) {
+        AddOrderOverviewViewController *overview = [segue destinationViewController];
+        overview.order = self.order;
+    }
+}
+
+#pragma mark - IBActions
+
+- (IBAction)cancel:(id)sender {
+    [[self parentViewController] dismissModalViewControllerAnimated:TRUE];
+}
 @end
