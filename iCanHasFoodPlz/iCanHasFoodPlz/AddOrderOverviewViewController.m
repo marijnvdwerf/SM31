@@ -10,6 +10,7 @@
 #import "Order.h"
 #import "ASIFormDataRequest.h"
 #import "SVProgressHUD.h"
+#import "Settings.h"
 
 
 @implementation AddOrderOverviewViewController
@@ -206,7 +207,7 @@
     NSURL *url = [[NSURL alloc] initWithString:@"http://school.navale.nl/p5/icanhasfood/addOrder.php"];
     ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
     [request setDelegate:self];
-    [request setPostValue:@"1" forKey:@"user"];
+    [request setPostValue:[Settings userId] forKey:@"user"];
     
     // Items versturen
     NSData *itemData = [NSJSONSerialization dataWithJSONObject:self.order.items options:NSJSONWritingPrettyPrinted error:nil];
