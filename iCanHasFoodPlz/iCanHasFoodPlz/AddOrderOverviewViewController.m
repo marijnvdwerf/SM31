@@ -113,14 +113,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *CellIdentifier = @"Cell";
+    NSString *CellIdentifier = @"AddOrderItemCell";
     
     if (indexPath.section == 1 && indexPath.row == 0) {
         CellIdentifier = @"AddOrderTimeSelectionCell";
     } else if (indexPath.section == 1 && indexPath.row == 1) {
         CellIdentifier = @"AddOrderVolunteerCell";
-    } else if (indexPath.section == 2 && indexPath.row == 0) {
-        CellIdentifier = @"AddOrderSubmitCell";
     }
     
     
@@ -208,7 +206,19 @@
     ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
     [request setDelegate:self];
     [request setPostValue:@"1" forKey:@"user"];
-        
+    
+    // Items versturen
+    NSData *itemData = [NSJSONSerialization dataWithJSONObject:self.order.items options:NSJSONWritingPrettyPrinted error:nil];
+    
+    
+    
+    NSString *itemJson = [[NSString alloc] initWithData:itemData                                        
+                          encoding:NSUTF8StringEncoding];
+    
+    [request setPostValue:itemJson forKey:@"items"];
+    
+    
+    // Halen of niet
     if (self.volunteerSwitch.on){
         // Naar server sturen dat gebruiker kan halen
         [request setPostValue:@"true" forKey:@"volunteer"];

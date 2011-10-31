@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B012EF6145EC84E00175893 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B012EF5145EC84E00175893 /* arrow.png */; };
 		7B280558143C6381003F0B0D /* bestelling.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B280556143C6381003F0B0D /* bestelling.png */; };
 		7B280559143C6381003F0B0D /* bestelling@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B280557143C6381003F0B0D /* bestelling@2x.png */; };
 		7B28055C143C650A003F0B0D /* bestellingtest2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B28055A143C650A003F0B0D /* bestellingtest2.png */; };
@@ -48,13 +49,13 @@
 		C6A8B4B0142A0EBA00FB2942 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6A8B4AE142A0EBA00FB2942 /* MainStoryboard_iPad.storyboard */; };
 		C6AF6E231459A8D5004B01FE /* Items.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6AF6E221459A8D5004B01FE /* Items.plist */; };
 		C6AF6E271459B20A004B01FE /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AF6E261459B20A004B01FE /* PullRefreshTableViewController.m */; };
-		C6AF6E291459B210004B01FE /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C6AF6E281459B210004B01FE /* arrow.png */; };
 		C6AF6E2B1459B280004B01FE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6AF6E2A1459B280004B01FE /* QuartzCore.framework */; };
 		C6E5D00E143C7269006412FF /* ShoppingList.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E5D00D143C7269006412FF /* ShoppingList.m */; };
 		C6E5D012143C824A006412FF /* OrderDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E5D011143C824A006412FF /* OrderDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B012EF5145EC84E00175893 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		7B280556143C6381003F0B0D /* bestelling.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bestelling.png; sourceTree = "<group>"; };
 		7B280557143C6381003F0B0D /* bestelling@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bestelling@2x.png"; sourceTree = "<group>"; };
 		7B28055A143C650A003F0B0D /* bestellingtest2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bestellingtest2.png; sourceTree = "<group>"; };
@@ -120,7 +121,6 @@
 		C6AF6E221459A8D5004B01FE /* Items.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Items.plist; sourceTree = "<group>"; };
 		C6AF6E251459B20A004B01FE /* PullRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullRefreshTableViewController.h; sourceTree = "<group>"; };
 		C6AF6E261459B20A004B01FE /* PullRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullRefreshTableViewController.m; sourceTree = "<group>"; };
-		C6AF6E281459B210004B01FE /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		C6AF6E2A1459B280004B01FE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C6E5D00C143C7269006412FF /* ShoppingList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingList.h; sourceTree = "<group>"; };
 		C6E5D00D143C7269006412FF /* ShoppingList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingList.m; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 		7B280551143C5F7C003F0B0D /* images */ = {
 			isa = PBXGroup;
 			children = (
-				C6AF6E281459B210004B01FE /* arrow.png */,
+				7B012EF5145EC84E00175893 /* arrow.png */,
 				7BDB4C871452D98700F8109A /* icon@2x.png */,
 				7BDB4C841452D97B00F8109A /* icon.png */,
 				7B280568143C7498003F0B0D /* mandje@2x.png */,
@@ -364,7 +364,7 @@
 				7BDB4C851452D97B00F8109A /* icon.png in Resources */,
 				7BDB4C881452D98700F8109A /* icon@2x.png in Resources */,
 				C6AF6E231459A8D5004B01FE /* Items.plist in Resources */,
-				C6AF6E291459B210004B01FE /* arrow.png in Resources */,
+				7B012EF6145EC84E00175893 /* arrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

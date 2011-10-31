@@ -30,7 +30,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "PullRefreshTableViewController.h"
 
-#define REFRESH_HEADER_HEIGHT 52.0f
+#define REFRESH_HEADER_HEIGHT 63.0f
 
 
 @implementation PullRefreshTableViewController
@@ -82,9 +82,9 @@
     refreshLabel.textAlignment = UITextAlignmentCenter;
 
     refreshArrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow.png"]];
-    refreshArrow.frame = CGRectMake(floorf((REFRESH_HEADER_HEIGHT - 27) / 2),
-                                    (floorf(REFRESH_HEADER_HEIGHT - 44) / 2),
-                                    27, 44);
+    refreshArrow.frame = CGRectMake(floorf((REFRESH_HEADER_HEIGHT - 23) / 2),
+                                    (floorf(REFRESH_HEADER_HEIGHT - 63) / 2),
+                                    23, 63);
 
     refreshSpinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     refreshSpinner.frame = CGRectMake(floorf(floorf(REFRESH_HEADER_HEIGHT - 20) / 2), floorf((REFRESH_HEADER_HEIGHT - 20) / 2), 20, 20);
