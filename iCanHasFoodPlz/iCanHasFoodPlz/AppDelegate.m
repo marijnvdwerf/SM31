@@ -10,11 +10,12 @@
 
 @implementation AppDelegate
 
-@synthesize window = _window;
+@synthesize window = _window, geoLocationUpdater = _geoLocationUpdater;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    self.geoLocationUpdater = [[GeoLocationUpdater alloc] init];
     return YES;
 }
 							

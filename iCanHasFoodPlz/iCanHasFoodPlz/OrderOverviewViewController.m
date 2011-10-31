@@ -9,7 +9,8 @@
 #import "OrderOverviewViewController.h"
 #import "Order.h"
 #import "OrderDetailsViewController.h"
-#import "ASIHTTPRequest.h"
+#import "ASIFormDataRequest.h"
+#import "Settings.h"
 
 
 @implementation OrderOverviewViewController
@@ -37,14 +38,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
-    
-    NSURL *url = [[NSURL alloc] initWithString:@"http://school.navale.nl/p5/icanhasfood/orders.php"];
-    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
-    [request setDelegate:self];
-    [request startAsynchronous];
-    
     self.orders = [[NSMutableArray alloc] init];
     
 
@@ -65,6 +58,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self refresh];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -88,11 +82,25 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+
+#pragma mark - Pull to Refresh
+
+- (void)refresh {
+    NSURL *url = [[NSURL alloc] initWithString:@"http://school.navale.nl/p5/icanhasfood/orders.php"];
+    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+    [request setDelegate:self];
+    
+    
+    
+    [request setPostValue:[Settings userId] forKey:@"user"];
+    [request startAsynchronous];
+}
+
 #pragma mark urlrequest
 
 - (void)requestFinished:(ASIHTTPRequest *)request
 {
-    NSDictionary *ordersJSON = [NSJSONSerialization JSONObjectWithData:[request responseData] options:nil error:nil];
+    NSDictionary *ordersJSON = [NSJSONSerialization JSONObjectWithData:[request responseData] options:NSJSONReadingMutableContainers error:nil];
     
     for(NSString *orderKey in ordersJSON) {
         NSDictionary *orderData = [ordersJSON valueForKey:orderKey];
@@ -101,21 +109,23 @@
         [self.orders addObject:newOrder];
     }
     
-    self.tableView.reloadData;
+    
+    // Stop the pull to refresh spinner
+    [self stopLoading];
+    
+    // Reload table view
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    #warning Potentially incomplete method implementation.
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    #warning Incomplete method implementation.
     return [self.orders count];
 }
 
@@ -134,6 +144,9 @@
     
     return cell;
 }
+
+
+
 
 #pragma mark - Segue
 

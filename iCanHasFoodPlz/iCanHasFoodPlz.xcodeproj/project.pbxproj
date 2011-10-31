@@ -24,6 +24,9 @@
 		7B58F18E1445D46000A9772A /* AddOrderOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B58F18D1445D46000A9772A /* AddOrderOverviewViewController.m */; };
 		7BDB4C851452D97B00F8109A /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BDB4C841452D97B00F8109A /* icon.png */; };
 		7BDB4C881452D98700F8109A /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BDB4C871452D98700F8109A /* icon@2x.png */; };
+		C60E400D145EB83E00767E8F /* GeoLocationUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = C60E400C145EB83E00767E8F /* GeoLocationUpdater.m */; };
+		C60E4010145EB86600767E8F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60E400F145EB86600767E8F /* CoreLocation.framework */; };
+		C60E4013145EDA7F00767E8F /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = C60E4012145EDA7F00767E8F /* Settings.m */; };
 		C6148A94143C9EC300928A3D /* AddOrderItemSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6148A93143C9EC300928A3D /* AddOrderItemSelectionView.m */; };
 		C62437FF1433421F00B9A7A6 /* OrderOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C62437FE1433421F00B9A7A6 /* OrderOverviewViewController.m */; };
 		C62438021433428300B9A7A6 /* ShoppingListsOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C62438011433428300B9A7A6 /* ShoppingListsOverviewViewController.m */; };
@@ -77,6 +80,11 @@
 		7B58F18D1445D46000A9772A /* AddOrderOverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddOrderOverviewViewController.m; sourceTree = "<group>"; };
 		7BDB4C841452D97B00F8109A /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
 		7BDB4C871452D98700F8109A /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../icon@2x.png"; sourceTree = "<group>"; };
+		C60E400B145EB83E00767E8F /* GeoLocationUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoLocationUpdater.h; sourceTree = "<group>"; };
+		C60E400C145EB83E00767E8F /* GeoLocationUpdater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoLocationUpdater.m; sourceTree = "<group>"; };
+		C60E400F145EB86600767E8F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C60E4011145EDA7F00767E8F /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		C60E4012145EDA7F00767E8F /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		C6148A92143C9EC300928A3D /* AddOrderItemSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddOrderItemSelectionView.h; sourceTree = "<group>"; };
 		C6148A93143C9EC300928A3D /* AddOrderItemSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddOrderItemSelectionView.m; sourceTree = "<group>"; };
 		C62437FD1433421F00B9A7A6 /* OrderOverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderOverviewViewController.h; sourceTree = "<group>"; };
@@ -138,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C60E4010145EB86600767E8F /* CoreLocation.framework in Frameworks */,
 				C6AF6E2B1459B280004B01FE /* QuartzCore.framework in Frameworks */,
 				C63084371445BF7D0005063F /* SystemConfiguration.framework in Frameworks */,
 				C63084341445BF660005063F /* MobileCoreServices.framework in Frameworks */,
@@ -257,6 +266,8 @@
 		C6A8B498142A0EBA00FB2942 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C60E400F145EB86600767E8F /* CoreLocation.framework */,
+				C6AF6E2A1459B280004B01FE /* QuartzCore.framework */,
 				C63084361445BF7D0005063F /* SystemConfiguration.framework */,
 				C63084331445BF660005063F /* MobileCoreServices.framework */,
 				C64C69B61445901200091A3C /* libz.dylib */,
@@ -280,6 +291,10 @@
 				C62438051433512D00B9A7A6 /* Order.m */,
 				C6E5D00C143C7269006412FF /* ShoppingList.h */,
 				C6E5D00D143C7269006412FF /* ShoppingList.m */,
+				C60E400B145EB83E00767E8F /* GeoLocationUpdater.h */,
+				C60E400C145EB83E00767E8F /* GeoLocationUpdater.m */,
+				C60E4011145EDA7F00767E8F /* Settings.h */,
+				C60E4012145EDA7F00767E8F /* Settings.m */,
 			);
 			path = iCanHasFoodPlz;
 			sourceTree = "<group>";
@@ -413,6 +428,8 @@
 				7B58F18E1445D46000A9772A /* AddOrderOverviewViewController.m in Sources */,
 				C6AF6E271459B20A004B01FE /* PullRefreshTableViewController.m in Sources */,
 				7B012EFD145ECE4800175893 /* SVProgressHUD.m in Sources */,
+				C60E400D145EB83E00767E8F /* GeoLocationUpdater.m in Sources */,
+				C60E4013145EDA7F00767E8F /* Settings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

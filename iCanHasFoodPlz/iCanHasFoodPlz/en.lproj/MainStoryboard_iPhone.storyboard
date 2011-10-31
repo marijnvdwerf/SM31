@@ -106,7 +106,7 @@
                     <navigationItem key="navigationItem" id="07s-J8-NCS"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="1540" y="1105"/>
+            <point key="canvasLocation" x="1586" y="1105"/>
         </scene>
         <scene sceneID="hbz-bH-v08">
             <objects>
@@ -573,7 +573,7 @@
                     <navigationItem key="navigationItem" id="64Q-1S-vHw"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="1637" y="284"/>
+            <point key="canvasLocation" x="1593" y="284"/>
         </scene>
         <scene sceneID="elB-Cl-w98">
             <objects>

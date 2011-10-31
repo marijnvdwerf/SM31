@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Order.h"
+#import "PullRefreshTableViewController.h"
 
-@interface OrderOverviewViewController : UITableViewController
+@interface OrderOverviewViewController : PullRefreshTableViewController
 @property (nonatomic, retain) NSMutableArray *orders;
 
 
