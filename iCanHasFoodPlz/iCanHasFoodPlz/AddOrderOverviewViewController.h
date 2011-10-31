@@ -14,4 +14,7 @@
 @property (nonatomic, retain) Order *order;
 @property (nonatomic, retain) NSDictionary *itemInfo;
 
+- (IBAction)sendOrderToServer:(id)sender;
+
+
 @end

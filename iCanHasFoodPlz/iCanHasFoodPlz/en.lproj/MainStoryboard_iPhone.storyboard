@@ -360,6 +360,9 @@
                                                     <state key="highlighted">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="sendOrderToServer:" destination="hPr-Vi-dvo" eventType="touchUpInside" id="cdX-Od-Bap"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -643,6 +646,9 @@
         </class>
         <class className="AddOrderOverviewViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddOrderOverviewViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="sendOrderToServer:"/>
+            </relationships>
         </class>
         <class className="AddOrderTimeSelectionView" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddOrderTimeSelectionView.h"/>
