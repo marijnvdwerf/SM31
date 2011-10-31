@@ -67,27 +67,31 @@
 }
 
 - (void)setupStrings{
-  textPull = [[NSString alloc] initWithString:@"Pull down to refresh..."];
-  textRelease = [[NSString alloc] initWithString:@"Release to refresh..."];
-  textLoading = [[NSString alloc] initWithString:@"Loading..."];
+  textPull = [[NSString alloc] initWithString:@"Sleep naar beneden om te verversen..."];
+  textRelease = [[NSString alloc] initWithString:@"Loslaten om te verversen..."];
+  textLoading = [[NSString alloc] initWithString:@"Laden..."];
 }
 
 - (void)addPullToRefreshHeader {
-    refreshHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0 - REFRESH_HEADER_HEIGHT, 320, REFRESH_HEADER_HEIGHT)];
-    refreshHeaderView.backgroundColor = [UIColor clearColor];
+    refreshHeaderView = [[UIView alloc] initWithFrame:CGRectMake(-1, 0 - REFRESH_HEADER_HEIGHT - 480, 322, REFRESH_HEADER_HEIGHT + 480)];
+    refreshHeaderView.backgroundColor = [UIColor colorWithRed:0.89 green:0.91 blue:0.93 alpha:1];
+    refreshHeaderView.layer.borderWidth = 1.0f;
+    refreshHeaderView.layer.borderColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.1].CGColor;
 
-    refreshLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, REFRESH_HEADER_HEIGHT)];
+    refreshLabel = [[UILabel alloc] initWithFrame:CGRectMake(1, 480, 320, REFRESH_HEADER_HEIGHT)];
     refreshLabel.backgroundColor = [UIColor clearColor];
     refreshLabel.font = [UIFont boldSystemFontOfSize:12.0];
+    refreshLabel.textColor =  [UIColor colorWithRed:0 green:0 blue:0 alpha:0.6];
+
     refreshLabel.textAlignment = UITextAlignmentCenter;
 
     refreshArrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow.png"]];
-    refreshArrow.frame = CGRectMake(floorf((REFRESH_HEADER_HEIGHT - 23) / 2),
-                                    (floorf(REFRESH_HEADER_HEIGHT - 63) / 2),
+    refreshArrow.frame = CGRectMake(1+ floorf((REFRESH_HEADER_HEIGHT - 23) / 2),
+                                    (480 + floorf(REFRESH_HEADER_HEIGHT - 63) / 2),
                                     23, 63);
 
     refreshSpinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    refreshSpinner.frame = CGRectMake(floorf(floorf(REFRESH_HEADER_HEIGHT - 20) / 2), floorf((REFRESH_HEADER_HEIGHT - 20) / 2), 20, 20);
+    refreshSpinner.frame = CGRectMake(1+floorf(floorf(REFRESH_HEADER_HEIGHT - 20) / 2), 480 + floorf((REFRESH_HEADER_HEIGHT - 20) / 2), 20, 20);
     refreshSpinner.hidesWhenStopped = YES;
 
     [refreshHeaderView addSubview:refreshLabel];

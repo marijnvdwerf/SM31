@@ -102,6 +102,8 @@
 {
     NSDictionary *ordersJSON = [NSJSONSerialization JSONObjectWithData:[request responseData] options:NSJSONReadingMutableContainers error:nil];
     
+    self.orders = [[NSMutableArray alloc] init];
+    
     for(NSString *orderKey in ordersJSON) {
         NSDictionary *orderData = [ordersJSON valueForKey:orderKey];
         Order *newOrder = [[Order alloc] initWithOrderDictionary:orderData];
