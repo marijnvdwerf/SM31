@@ -9,13 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface AddOrderTimeSelectionView : UITableViewController
-<UITableViewDataSource,UITableViewDelegate>
-{
-    
-}
+
 
 @property (nonatomic, retain) NSArray *tableData;
 
 @property (nonatomic, retain) NSDate *time;
-
 @end

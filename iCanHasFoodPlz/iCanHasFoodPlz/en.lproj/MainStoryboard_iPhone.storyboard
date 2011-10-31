@@ -312,7 +312,7 @@
                                 </view>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="VSP-vn-xpP" kind="push" id="xs1-wx-Zpl"/>
+                                    <segue destination="VSP-vn-xpP" kind="push" identifier="showWhen" id="xs1-wx-Zpl"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddOrderVolunteerCell" textLabel="Qbf-KD-kfW" style="IBUITableViewCellStyleDefault" id="O5u-fU-cfI">
@@ -624,7 +624,7 @@
                 <relationship kind="outlet" name="totalPriceLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
-        <class className="OrderOverviewViewController" superclassName="UITableViewController">
+        <class className="OrderOverviewViewController" superclassName="PullRefreshTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/OrderOverviewViewController.h"/>
         </class>
         <class className="PullRefreshTableViewController" superclassName="UITableViewController">

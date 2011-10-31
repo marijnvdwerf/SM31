@@ -139,6 +139,7 @@
     
     if (indexPath.section == 1 && indexPath.row == 0) {
         cell.textLabel.text = @"Wanneer";
+        cell.detailTextLabel.text = @"default";
     }
     
     if (indexPath.section == 1 && indexPath.row == 1) {
