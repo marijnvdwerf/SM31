@@ -8,11 +8,12 @@
 
 #import "AddOrderOverviewViewController.h"
 #import "Order.h"
+#import "ASIFormDataRequest.h"
 
 
 @implementation AddOrderOverviewViewController
 
-@synthesize order = _order, itemInfo = _itemInfo;
+@synthesize order = _order, itemInfo = _itemInfo, volunteerSwitch = _volunteerSwitch;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -118,6 +119,8 @@
         CellIdentifier = @"AddOrderTimeSelectionCell";
     } else if (indexPath.section == 1 && indexPath.row == 1) {
         CellIdentifier = @"AddOrderVolunteerCell";
+    } else if (indexPath.section == 2 && indexPath.row == 0) {
+        CellIdentifier = @"AddOrderSubmitCell";
     }
     
     
@@ -135,13 +138,13 @@
     }
     
     if (indexPath.section == 1 && indexPath.row == 0) {
-        cell.text = @"Wanneer";
+        cell.textLabel.text = @"Wanneer";
     }
     
     if (indexPath.section == 1 && indexPath.row == 1) {
-        cell.text = @"Halen";
-        UISwitch *haalSwitch = [[UISwitch alloc] initWithFrame:CGRectZero];
-        cell.accessoryView = haalSwitch;
+        cell.textLabel.text = @"Halen";
+        self.volunteerSwitch = [[UISwitch alloc] initWithFrame:CGRectZero];
+        cell.accessoryView = self.volunteerSwitch;
         
         [(UISwitch *)cell.accessoryView setOn:YES];
     }
@@ -201,5 +204,19 @@
 */
 
 - (IBAction)sendOrderToServer:(id)sender {
+    NSURL *url = [[NSURL alloc] initWithString:@"http://school.navale.nl/p5/icanhasfood/addOrder.php"];
+    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+    [request setDelegate:self];
+    [request setPostValue:@"1" forKey:@"user"];
+        
+    if (self.volunteerSwitch.on){
+        // Naar server sturen dat gebruiker kan halen
+        [request setPostValue:@"true" forKey:@"volunteer"];
+    }
+    else {
+        // Naar server sturen dat gebruiker NIET kan halen
+        [request setPostValue:@"false" forKey:@"volunteer"];
+    }
+    [request startAsynchronous];
 }
 @end

@@ -13,6 +13,7 @@
 
 @property (nonatomic, retain) Order *order;
 @property (nonatomic, retain) NSDictionary *itemInfo;
+@property (nonatomic, retain) UISwitch *volunteerSwitch;
 
 - (IBAction)sendOrderToServer:(id)sender;
 
