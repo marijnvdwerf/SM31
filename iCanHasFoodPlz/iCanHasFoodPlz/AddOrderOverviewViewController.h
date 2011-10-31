@@ -8,14 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "Order.h"
+#import "ASIFormDataRequest.h"
 
-@interface AddOrderOverviewViewController : UITableViewController
+@interface AddOrderOverviewViewController : UITableViewController<ASIHTTPRequestDelegate>
 
 @property (nonatomic, retain) Order *order;
 @property (nonatomic, retain) NSDictionary *itemInfo;
 @property (nonatomic, retain) UISwitch *volunteerSwitch;
 
 - (IBAction)sendOrderToServer:(id)sender;
-
-
 @end

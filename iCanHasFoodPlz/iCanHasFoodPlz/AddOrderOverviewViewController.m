@@ -9,6 +9,7 @@
 #import "AddOrderOverviewViewController.h"
 #import "Order.h"
 #import "ASIFormDataRequest.h"
+#import "SVProgressHUD.h"
 
 
 @implementation AddOrderOverviewViewController
@@ -228,5 +229,20 @@
         [request setPostValue:@"false" forKey:@"volunteer"];
     }
     [request startAsynchronous];
+    
+    //HUD
+    [SVProgressHUD showInView:self.view];
+    
 }
+
+- (void)requestFinished:(ASIHTTPRequest *)request {
+    [SVProgressHUD dismissWithSuccess:@"Succesvol"];
+}
+
+- (void) requestFailed:(ASIHTTPRequest *)request {
+    NSLog(@"%@", request.responseStatusMessage);
+    [SVProgressHUD dismissWithError:@"Verbindingsfout"];
+}
+
+
 @end
