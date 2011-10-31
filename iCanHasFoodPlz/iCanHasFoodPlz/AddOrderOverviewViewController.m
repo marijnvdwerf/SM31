@@ -112,7 +112,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     NSString *CellIdentifier = @"Cell";
     
     if (indexPath.section == 1 && indexPath.row == 0) {
@@ -134,6 +133,26 @@
         NSDictionary *currentItemInfo = [self.itemInfo objectForKey:[allItemIds objectAtIndex:indexPath.row]];
         cell.textLabel.text = [currentItemInfo objectForKey:@"name"];
     }
+    
+    if (indexPath.section == 1 && indexPath.row == 0) {
+        cell.text = @"Wanneer";
+    }
+    
+    if (indexPath.section == 1 && indexPath.row == 1) {
+        cell.text = @"Halen";
+        UISwitch *haalSwitch = [[UISwitch alloc] initWithFrame:CGRectZero];
+        cell.accessoryView = haalSwitch;
+        
+        [(UISwitch *)cell.accessoryView setOn:YES];
+    }
+
+   
+    
+
+    
+    
+    
+    
     
     // Configure the cell...
     
