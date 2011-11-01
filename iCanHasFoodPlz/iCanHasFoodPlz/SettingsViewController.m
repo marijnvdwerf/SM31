@@ -46,6 +46,7 @@
 
 - (void)viewDidUnload
 {
+    [self setNameTextField:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -90,7 +91,7 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 2;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -108,16 +109,20 @@
     
     
     if(indexPath.row == 0) {
-        self.nameTextField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 200, cell.frame.size.height)];
+        // Name input
+        self.nameTextField = [[UITextField alloc] initWithFrame:CGRectMake(125, 0, 175, cell.frame.size.height)];
         self.nameTextField.autocorrectionType = UITextAutocorrectionTypeNo; // no auto correction support
-        self.nameTextField.autocapitalizationType = UITextAutocapitalizationTypeNone; // no auto capitalization support
+        self.nameTextField.autocapitalizationType = UITextAutocapitalizationTypeWords; // no auto capitalization support
         self.nameTextField.textAlignment = UITextAlignmentRight;
         self.nameTextField.adjustsFontSizeToFitWidth = YES;
         self.nameTextField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
         self.nameTextField.textColor = cell.detailTextLabel.textColor;
+        self.nameTextField.returnKeyType = UIReturnKeyDone;
+        self.nameTextField.delegate = self;
         
-        cell.accessoryView = self.nameTextField;
+        [cell addSubview: self.nameTextField];
     } else {
+        // Group selection is canceled.
     }
     
     // Configure the cell...
@@ -180,6 +185,21 @@
 #pragma mark - Segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    [self.nameTextField resignFirstResponder];
+
 }
+
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    if(![textField.text isEqualToString:@""]) {
+        [textField resignFirstResponder];
+        return YES;
+    }
+    
+    return NO;
+}
+
+#pragma mark - Keyboard
+
+
 @end

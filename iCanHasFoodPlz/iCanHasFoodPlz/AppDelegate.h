@@ -14,4 +14,7 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, retain) GeoLocationUpdater *geoLocationUpdater;
 
+
+- (void)textFieldDidEndOnExit;
+
 @end
