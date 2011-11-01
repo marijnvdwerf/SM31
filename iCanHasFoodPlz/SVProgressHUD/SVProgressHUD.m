@@ -271,8 +271,8 @@ static SVProgressHUD *sharedView = nil;
         UIWindow *keyWindow = [keyWindows lastObject];
         addingToWindow = YES;
         
-        if([keyWindow respondsToSelector:@selector(rootViewController)])
-            view = keyWindow.rootViewController.view;
+        //if([keyWindow respondsToSelector:@selector(rootViewController)])
+        //    view = keyWindow.rootViewController.view;
         
         if(view == nil)
             view = keyWindow;

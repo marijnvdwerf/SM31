@@ -12,4 +12,6 @@
 
 + (NSString *)userId;
 
++ (NSString *)userName;
++ (void)updateUserName:(NSString *)newName;
 @end

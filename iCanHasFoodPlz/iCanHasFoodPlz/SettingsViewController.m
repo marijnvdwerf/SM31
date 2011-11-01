@@ -8,6 +8,8 @@
 
 #import "SettingsViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "Settings.h"
+#import "ASIFormDataRequest.h"
 
 
 @implementation SettingsViewController
@@ -119,6 +121,7 @@
         self.nameTextField.textColor = cell.detailTextLabel.textColor;
         self.nameTextField.returnKeyType = UIReturnKeyDone;
         self.nameTextField.delegate = self;
+        self.nameTextField.text = [Settings userName];
         
         [cell addSubview: self.nameTextField];
     } else {
@@ -173,13 +176,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    if(indexPath.section == 0 && indexPath.row == 0 ) {
+        // Name row
+        [self.nameTextField becomeFirstResponder];
+    }
 }
 
 #pragma mark - Segue
@@ -193,13 +193,26 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     if(![textField.text isEqualToString:@""]) {
         [textField resignFirstResponder];
+        
+        //Check if name has changed from Settings
+        if (![textField.text isEqualToString:[Settings userName]]) {
+            NSURL *url = [[NSURL alloc] initWithString:@"http://school.navale.nl/p5/icanhasfood/updateUser.php"];
+            ASIFormDataRequest *request = [[ASIFormDataRequest alloc] initWithURL:url];
+            [request setPostValue:textField.text forKey:@"name"];
+            [request setPostValue:[Settings userId] forKey:@"user"];
+            [request setDelegate:self];
+            [request start];
+        }
+        
         return YES;
     }
     
     return NO;
 }
 
-#pragma mark - Keyboard
+#pragma mark - ASI HTTP Request Delegate
+
+
 
 
 @end

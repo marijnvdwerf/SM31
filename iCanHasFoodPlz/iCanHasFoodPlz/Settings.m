@@ -22,4 +22,23 @@
     }
     return userId;
 }
+
++ (NSString *)userName {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *userName = [defaults objectForKey:@"userName"];
+    
+    if(userName == nil) {
+        userName = @"-";
+        [defaults setValue:userName forKey:@"userName"];
+        [defaults synchronize];
+    }
+    
+    return userName;
+}
+
++ (void)updateUserName:(NSString *)newName {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setValue:newName forKey:@"userName"];
+    [defaults synchronize];
+}
 @end

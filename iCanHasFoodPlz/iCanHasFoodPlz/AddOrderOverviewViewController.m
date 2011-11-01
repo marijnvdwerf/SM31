@@ -233,7 +233,7 @@
     [request startAsynchronous];
     
     //HUD
-    [SVProgressHUD showInView:self.view];
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
     
 }
 

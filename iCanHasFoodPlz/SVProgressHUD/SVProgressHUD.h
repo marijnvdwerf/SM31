@@ -20,6 +20,7 @@ typedef NSUInteger SVProgressHUDMaskType;
 
 @interface SVProgressHUD : UIView {
     UIView *_hudView;
+    UIView *_overlayView;
 }
 
 /* 
