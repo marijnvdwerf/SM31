@@ -238,7 +238,10 @@
 }
 
 - (void)requestFinished:(ASIHTTPRequest *)request {
-    [SVProgressHUD dismissWithSuccess:@"Succesvol"];
+
+    [SVProgressHUD dismissWithSuccess:@"Succesvol" afterDelay:2];
+    //sleep(2);
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 - (void) requestFailed:(ASIHTTPRequest *)request {
