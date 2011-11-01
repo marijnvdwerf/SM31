@@ -34,6 +34,8 @@
 		C625669B1445B7A5008DE470 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C625669A1445B7A5008DE470 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C63084341445BF660005063F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C63084331445BF660005063F /* MobileCoreServices.framework */; };
 		C63084371445BF7D0005063F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C63084361445BF7D0005063F /* SystemConfiguration.framework */; };
+		C63A1662145EE49100846045 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A1661145EE49100846045 /* SettingsViewController.m */; };
+		C63A1665145FEE3E00846045 /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C63A1664145FEE3E00846045 /* arrow@2x.png */; };
 		C64C69AC14458FD200091A3C /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = C64C699914458FD200091A3C /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C64C69AD14458FD200091A3C /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = C64C699C14458FD200091A3C /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C64C69AE14458FD200091A3C /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = C64C699E14458FD200091A3C /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -97,6 +99,9 @@
 		C625669A1445B7A5008DE470 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		C63084331445BF660005063F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		C63084361445BF7D0005063F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C63A1660145EE49100846045 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		C63A1661145EE49100846045 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		C63A1664145FEE3E00846045 /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
 		C64C699814458FD200091A3C /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		C64C699914458FD200091A3C /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		C64C699A14458FD200091A3C /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -174,6 +179,7 @@
 		7B280551143C5F7C003F0B0D /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C63A1664145FEE3E00846045 /* arrow@2x.png */,
 				7B012EF5145EC84E00175893 /* arrow.png */,
 				7BDB4C871452D98700F8109A /* icon@2x.png */,
 				7BDB4C841452D97B00F8109A /* icon.png */,
@@ -209,6 +215,8 @@
 				7B58F17E1445C6B900A9772A /* AddOrderTimeSelectionView.m */,
 				7B58F18C1445D46000A9772A /* AddOrderOverviewViewController.h */,
 				7B58F18D1445D46000A9772A /* AddOrderOverviewViewController.m */,
+				C63A1660145EE49100846045 /* SettingsViewController.h */,
+				C63A1661145EE49100846045 /* SettingsViewController.m */,
 			);
 			name = Interface;
 			sourceTree = "<group>";
@@ -246,7 +254,6 @@
 			isa = PBXGroup;
 			children = (
 				7B012EF8145ECE4800175893 /* SVProgressHUD */,
-				C6AF6E2A1459B280004B01FE /* QuartzCore.framework */,
 				C6AF6E241459B1E2004B01FE /* PullToRefresh */,
 				C64C699714458FAF00091A3C /* ASIHTTPRequest */,
 				C6A8B49F142A0EBA00FB2942 /* iCanHasFoodPlz */,
@@ -266,6 +273,7 @@
 		C6A8B498142A0EBA00FB2942 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C6AF6E2A1459B280004B01FE /* QuartzCore.framework */,
 				C60E400F145EB86600767E8F /* CoreLocation.framework */,
 				C6AF6E2A1459B280004B01FE /* QuartzCore.framework */,
 				C63084361445BF7D0005063F /* SystemConfiguration.framework */,
@@ -397,6 +405,7 @@
 				C6AF6E231459A8D5004B01FE /* Items.plist in Resources */,
 				7B012EF6145EC84E00175893 /* arrow.png in Resources */,
 				7B012EFC145ECE4800175893 /* SVProgressHUD.bundle in Resources */,
+				C63A1665145FEE3E00846045 /* arrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +439,7 @@
 				7B012EFD145ECE4800175893 /* SVProgressHUD.m in Sources */,
 				C60E400D145EB83E00767E8F /* GeoLocationUpdater.m in Sources */,
 				C60E4013145EDA7F00767E8F /* Settings.m in Sources */,
+				C63A1662145EE49100846045 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
