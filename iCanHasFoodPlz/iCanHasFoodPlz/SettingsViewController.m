@@ -10,6 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "Settings.h"
 #import "ASIFormDataRequest.h"
+#import "SVProgressHUD.h"
 
 
 @implementation SettingsViewController
@@ -201,6 +202,7 @@
             [request setPostValue:textField.text forKey:@"name"];
             [request setPostValue:[Settings userId] forKey:@"user"];
             [request setDelegate:self];
+            [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
             [request start];
         }
         
@@ -211,6 +213,18 @@
 }
 
 #pragma mark - ASI HTTP Request Delegate
+
+
+-(void)requestFinished:(ASIHTTPRequest *)request {
+    [Settings updateUserName:self.nameTextField.text];
+    [SVProgressHUD dismissWithSuccess:@"Naam is opgeslagen" afterDelay:.8];
+}
+
+
+-(void)requestFailed:(ASIHTTPRequest *)request {
+    [SVProgressHUD dismissWithError:@"Je internet faalt" afterDelay:.8];
+}
+
 
 
 

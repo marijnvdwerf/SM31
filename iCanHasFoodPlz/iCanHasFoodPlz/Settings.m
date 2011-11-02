@@ -16,7 +16,11 @@
     NSString *userId = [defaults objectForKey:@"userId"];
     
     if(userId == nil) {
-        userId = @"3";
+        NSURL *url = [[NSURL alloc] initWithString:@"http://school.navale.nl/p5/icanhasfood/newUser.php"];
+        
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+        userId = [[NSString alloc] initWithData:response encoding:NSStringEncodingConversionAllowLossy];
         [defaults setValue:userId forKey:@"userId"];
         [defaults synchronize];
     }

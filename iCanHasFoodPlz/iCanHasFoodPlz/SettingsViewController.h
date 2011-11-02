@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ASIFormDataRequest.h"
 
-@interface SettingsViewController : UITableViewController <UITextFieldDelegate>
+@interface SettingsViewController : UITableViewController <UITextFieldDelegate, ASIHTTPRequestDelegate>
 
 @property (nonatomic, retain) UITextField *nameTextField;
 
