@@ -58,7 +58,7 @@
                     <tabBarItem key="tabBarItem" title="Instellingen" image="gear.png" id="LTv-59-vhG"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="99r-fb-ucz">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.60000002379999995" green="0.80000001190000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.37254902719999999" green="0.69019609689999994" blue="0.89803922179999995" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="1bQ-Yj-OSA" kind="relationship" relationship="rootViewController" id="zfW-gW-BzI"/>
@@ -74,7 +74,7 @@
                     <tabBarItem key="tabBarItem" title="Bestellingen" image="bestellingtest2.png" id="6Ek-t2-um6"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="a0l-kS-RhJ">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" cyan="0.80241936449999995" magenta="0.229838714" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                        <color key="tintColor" red="0.37254902719999999" green="0.69019609689999994" blue="0.89803922179999995" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="cby-ux-z2R" kind="relationship" relationship="rootViewController" id="7wR-rT-DOC"/>
@@ -136,7 +136,7 @@
                 <navigationController definesPresentationContext="YES" id="OT7-wz-h9K" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="qLp-tl-f9H">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="1" green="0.07060657998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.37254902719999999" green="0.69019609689999994" blue="0.89803922179999995" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="Kzo-7A-Ebg" kind="relationship" relationship="rootViewController" id="MnP-l9-fRO"/>
@@ -378,7 +378,7 @@
                     <tabBarItem key="tabBarItem" title="Halen" image="mandje.png" id="8Cs-7k-5cp"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="qVv-Pq-NUG">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="1" green="0.53725492949999998" blue="0.054901961239999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.37254902719999999" green="0.69019609689999994" blue="0.89803922179999995" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="IIC-gx-Asb" kind="relationship" relationship="rootViewController" id="cau-bq-VVA"/>
@@ -544,6 +544,42 @@
         <image name="gear.png" width="30" height="30"/>
         <image name="mandje.png" width="30" height="29"/>
     </resources>
+    <classes>
+        <class className="AddOrderItemSelectionView" superclassName="PullRefreshTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddOrderItemSelectionView.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="outlet" name="nextButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="AddOrderOverviewViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddOrderOverviewViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="sendOrderToServer:"/>
+            </relationships>
+        </class>
+        <class className="AddOrderTimeSelectionView" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddOrderTimeSelectionView.h"/>
+        </class>
+        <class className="OrderDetailsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OrderDetailsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="totalPriceLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="OrderOverviewViewController" superclassName="PullRefreshTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OrderOverviewViewController.h"/>
+        </class>
+        <class className="PullRefreshTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PullRefreshTableViewController.h"/>
+        </class>
+        <class className="SettingsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
+        </class>
+        <class className="ShoppingListsOverviewViewController" superclassName="PullRefreshTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ShoppingListsOverviewViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

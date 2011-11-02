@@ -9,6 +9,7 @@
 #import "AddOrderTimeSelectionView.h"
 #import "Order.h"
 #import "AddOrderOverviewViewController.h"
+#import "ASIHTTPRequest.h"
 
 @implementation AddOrderTimeSelectionView
 
@@ -34,7 +35,37 @@
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
-{
+{    
+//    NSURL *url = [[NSURL alloc] initWithString:@"http://school.navale.nl/p5/icanhasfood/breaks.php"];
+//    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+//    [request setDelegate:self];
+//    
+//    
+//    NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//    
+//
+//    NSDictionary *results = [jsonString JSONValue];
+//
+//    NSArray *photos = [[results objectForKey:@"photos"] objectForKey:@"photo"];
+//    
+//
+//    
+//    for (NSDictionary *photo in photos)
+//    {
+//        // Get title of the image
+//        NSString *title = [photo objectForKey:@"title"];
+//    }
+//    [request startAsynchronous];
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
     NSArray *tempData = [[NSArray alloc] initWithObjects: @"1e pauze 9:25", @"2e pauze 14:55", nil];
     
     self.tableData = tempData;
@@ -193,4 +224,17 @@
     }
 }
 
+
+
+
+- (IBAction)getTimeForNextBreak:(id)sender
+{
+    NSURL *url = [NSURL URLWithString:@"http://school.navale.nl/p5/icanhasfood/breaks.php"];
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    [request setDelegate:self];
+    
+    
+    
+    [request startAsynchronous];
+}
 @end
