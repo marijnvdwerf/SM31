@@ -38,7 +38,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.orders = [[NSMutableArray alloc] init];
+    
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    cachePath = [cachePath stringByAppendingPathComponent:@"orders.plist"];
+    NSDictionary *orders = [[NSDictionary alloc] initWithContentsOfFile:cachePath];
+    
+    if(orders == nil) {
+        [self startLoading];
+    } else {
+        [self parseOrderDictionary:orders];
+    }
     
 
     // Uncomment the following line to preserve selection between presentations.
@@ -90,8 +99,6 @@
     ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
     [request setDelegate:self];
     
-    
-    
     [request setPostValue:[Settings userId] forKey:@"user"];
     [request startAsynchronous];
 }
@@ -102,21 +109,32 @@
 {
     NSDictionary *ordersJSON = [NSJSONSerialization JSONObjectWithData:[request responseData] options:NSJSONReadingMutableContainers error:nil];
     
-    self.orders = [[NSMutableArray alloc] init];
     
-    for(NSString *orderKey in ordersJSON) {
-        NSDictionary *orderData = [ordersJSON valueForKey:orderKey];
-        Order *newOrder = [[Order alloc] initWithOrderDictionary:orderData];
-        
-        [self.orders addObject:newOrder];
-    }
+    // Cache the dictionary to a plist.
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    cachePath = [cachePath stringByAppendingPathComponent:@"orders.plist"];
+    [ordersJSON writeToFile:cachePath atomically:YES];
     
+    [self parseOrderDictionary:ordersJSON];
     
     // Stop the pull to refresh spinner
     [self stopLoading];
     
     // Reload table view
     [self.tableView reloadData];
+}
+
+- (void)parseOrderDictionary:(NSDictionary*)orderDictionary
+{
+    self.orders = [[NSMutableArray alloc] init];
+    
+    for(NSString *orderKey in orderDictionary) {
+        NSDictionary *orderData = [orderDictionary valueForKey:orderKey];
+        Order *newOrder = [[Order alloc] initWithOrderDictionary:orderData];
+        
+        [self.orders addObject:newOrder];
+    }
+    
 }
 
 #pragma mark - Table view data source
@@ -140,7 +158,15 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = [[NSString alloc] initWithFormat:@"Bestelling %i", indexPath.row+1];
+    
+    
+    Order *rowOrder = [self.orders objectAtIndex:indexPath.row];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateStyle = NSDateFormatterMediumStyle;
+    dateFormatter.timeStyle = NSDateFormatterShortStyle;
+    
+    cell.textLabel.text = [dateFormatter stringFromDate:rowOrder.deliveryTarget];
     
     // Configure the cell...
     

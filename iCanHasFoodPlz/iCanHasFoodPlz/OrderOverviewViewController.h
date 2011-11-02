@@ -14,4 +14,6 @@
 @property (nonatomic, retain) NSMutableArray *orders;
 
 
+- (void)parseOrderDictionary:(NSDictionary*)orderDictionary;
+
 @end

@@ -101,14 +101,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return [self.items count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    #warning Incomplete method implementation.
     // Return the number of rows in the section.
     
     /* Create the dictionary. */
@@ -200,7 +198,7 @@
 - (void)requestFinished:(ASIHTTPRequest *)request
 {
     // Parse returned JSON
-    NSDictionary *jsonSerialization = [NSJSONSerialization JSONObjectWithData:[request responseData] options:nil error:nil];
+    NSDictionary *jsonSerialization = [NSJSONSerialization JSONObjectWithData:[request responseData] options:NSJSONReadingMutableContainers error:nil];
     
     // Cache the dictionary to a plist.
     NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];

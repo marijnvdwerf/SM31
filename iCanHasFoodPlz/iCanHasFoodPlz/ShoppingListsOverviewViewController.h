@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "PullRefreshTableViewController.h"
+#import "ASIFormDataRequest.h"
 
-@interface ShoppingListsOverviewViewController : PullRefreshTableViewController
+@interface ShoppingListsOverviewViewController : PullRefreshTableViewController <ASIHTTPRequestDelegate>
+
+@property (nonatomic, retain) NSMutableArray *shoppingLists;
+
+- (void)parseListDictionary:(NSDictionary*)listDictionary;
 
 @end

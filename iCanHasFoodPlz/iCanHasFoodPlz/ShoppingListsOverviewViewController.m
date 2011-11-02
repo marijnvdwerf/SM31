@@ -7,9 +7,14 @@
 //
 
 #import "ShoppingListsOverviewViewController.h"
+#import "ASIFormDataRequest.h"
+#import "PullRefreshTableViewController.h"
+#import "Settings.h"
+#import "ShoppingList.h"
 
 
 @implementation ShoppingListsOverviewViewController
+@synthesize shoppingLists = _shoppingLists;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -39,6 +44,16 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    cachePath = [cachePath stringByAppendingPathComponent:@"shoppinglists.plist"];
+    NSDictionary *lists = [[NSDictionary alloc] initWithContentsOfFile:cachePath];
+    
+    if(lists == nil) {
+        [self startLoading];
+    } else {
+        [self parseListDictionary:lists];
+    }
 }
 
 - (void)viewDidUnload
@@ -87,7 +102,7 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 1;
+    return [self.shoppingLists count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -104,6 +119,41 @@
     // Configure the cell...
     
     return cell;
+}
+
+
+#pragma mark - Pull to Refresh
+
+- (void)refresh {
+    NSURL *url = [[NSURL alloc] initWithString:@"http://school.navale.nl/p5/icanhasfood/shoppinglists.php"];
+    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+    [request setDelegate:self];
+    
+    
+    
+    [request setPostValue:[Settings userId] forKey:@"user"];
+    [request startAsynchronous];
+}
+
+#pragma mark urlrequest
+
+- (void)requestFinished:(ASIHTTPRequest *)request
+{
+    NSDictionary *shoppingListsJSON = [NSJSONSerialization JSONObjectWithData:[request responseData] options:NSJSONReadingMutableContainers error:nil];
+
+    // Cache the dictionary to a plist.
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    cachePath = [cachePath stringByAppendingPathComponent:@"shoppinglists.plist"];
+    [shoppingListsJSON writeToFile:cachePath atomically:YES];
+    
+    
+    [self parseListDictionary:shoppingListsJSON];
+    
+    // Stop the pull to refresh spinner
+    [self stopLoading];
+    
+    // Reload table view
+    [self.tableView reloadData];
 }
 
 /*
@@ -144,6 +194,22 @@
     return YES;
 }
 */
+
+- (void)parseListDictionary:(NSDictionary*)listArray
+{
+    self.shoppingLists = [[NSMutableArray alloc] init];
+    
+    
+    
+    for(NSString *listKey in listArray) {
+        NSDictionary *listData = [listArray objectForKey:listKey];
+        ShoppingList *newList = [[ShoppingList alloc] initWithShoppingListDictionary:listData];
+        
+        [self.shoppingLists addObject:newList];
+    }
+    
+}
+
 
 #pragma mark - Table view delegate
 

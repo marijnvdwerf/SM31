@@ -12,6 +12,8 @@
 
 @property (nonatomic, retain) NSDate *received;
 @property (nonatomic, retain) NSDate *due;
-@property (nonatomic, retain) NSArray *items;
+@property (nonatomic, retain) NSDictionary *items;
+
+- (id) initWithShoppingListDictionary:(NSDictionary*)shoppingListInfo;
 
 @end
