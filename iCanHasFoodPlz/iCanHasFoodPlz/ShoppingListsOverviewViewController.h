@@ -14,6 +14,7 @@
 
 @property (nonatomic, retain) NSMutableArray *shoppingLists;
 
+
 - (void)parseListDictionary:(NSDictionary*)listDictionary;
 
 @end

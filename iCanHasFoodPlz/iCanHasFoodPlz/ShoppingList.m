@@ -11,7 +11,8 @@
 @implementation ShoppingList
 @synthesize received = _received,
             due = _due,
-            items = _items;
+            items = _items,
+            users = _users;
 
 - (id) init {
     self = [super init];
@@ -24,9 +25,15 @@
 - (id) initWithShoppingListDictionary:(NSDictionary*)shoppingListInfo {
     self = [super init];
     if (self) {
-        /*// Delivery date
-         int timestamp = [[orderInfo objectForKey:@"date"] intValue];
-         self.deliveryTarget = [NSDate dateWithTimeIntervalSince1970:timestamp];
+        // Delivery date
+         int timestamp = [[shoppingListInfo objectForKey:@"date"] intValue];
+         self.due = [NSDate dateWithTimeIntervalSince1970:timestamp];
+        
+        
+        self.users = [shoppingListInfo objectForKey:@"users"];
+        self.items = [shoppingListInfo objectForKey:@"items"];
+        
+        /*
          
          // Volunteering
          Boolean volunteer = [[orderInfo objectForKey:@"volunteer"] boolValue];

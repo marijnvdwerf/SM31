@@ -46,6 +46,7 @@
 		C64C69B314458FD200091A3C /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C64C69AA14458FD200091A3C /* ASINetworkQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C64C69B514458FF700091A3C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64C69B414458FF700091A3C /* CFNetwork.framework */; };
 		C64C69B71445901200091A3C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C64C69B61445901200091A3C /* libz.dylib */; };
+		C6907A6514614A5100A6BB3A /* ShoppingListDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6907A6414614A5100A6BB3A /* ShoppingListDetailsViewController.m */; };
 		C6A8B49A142A0EBA00FB2942 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6A8B499142A0EBA00FB2942 /* UIKit.framework */; };
 		C6A8B49C142A0EBA00FB2942 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6A8B49B142A0EBA00FB2942 /* Foundation.framework */; };
 		C6A8B49E142A0EBA00FB2942 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6A8B49D142A0EBA00FB2942 /* CoreGraphics.framework */; };
@@ -124,6 +125,8 @@
 		C64C69AB14458FD200091A3C /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
 		C64C69B414458FF700091A3C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		C64C69B61445901200091A3C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		C6907A6314614A5100A6BB3A /* ShoppingListDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingListDetailsViewController.h; sourceTree = "<group>"; };
+		C6907A6414614A5100A6BB3A /* ShoppingListDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingListDetailsViewController.m; sourceTree = "<group>"; };
 		C6A8B495142A0EBA00FB2942 /* iCanHasFoodPlz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCanHasFoodPlz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6A8B499142A0EBA00FB2942 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C6A8B49B142A0EBA00FB2942 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -303,6 +306,8 @@
 				C60E400C145EB83E00767E8F /* GeoLocationUpdater.m */,
 				C60E4011145EDA7F00767E8F /* Settings.h */,
 				C60E4012145EDA7F00767E8F /* Settings.m */,
+				C6907A6314614A5100A6BB3A /* ShoppingListDetailsViewController.h */,
+				C6907A6414614A5100A6BB3A /* ShoppingListDetailsViewController.m */,
 			);
 			path = iCanHasFoodPlz;
 			sourceTree = "<group>";
@@ -440,6 +445,7 @@
 				C60E400D145EB83E00767E8F /* GeoLocationUpdater.m in Sources */,
 				C60E4013145EDA7F00767E8F /* Settings.m in Sources */,
 				C63A1662145EE49100846045 /* SettingsViewController.m in Sources */,
+				C6907A6514614A5100A6BB3A /* ShoppingListDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

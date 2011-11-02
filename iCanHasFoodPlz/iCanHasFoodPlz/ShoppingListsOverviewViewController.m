@@ -11,6 +11,7 @@
 #import "PullRefreshTableViewController.h"
 #import "Settings.h"
 #import "ShoppingList.h"
+#import "ShoppingListDetailsViewController.h"
 
 
 @implementation ShoppingListsOverviewViewController
@@ -114,7 +115,13 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = [[NSString alloc] initWithFormat:@"Shopping list #%i", indexPath.row+1];
+    ShoppingList *rowList = [self.shoppingLists objectAtIndex:indexPath.row];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateStyle = NSDateFormatterMediumStyle;
+    dateFormatter.timeStyle = NSDateFormatterShortStyle;
+    
+    cell.textLabel.text = [dateFormatter stringFromDate:rowList.due];
     
     // Configure the cell...
     
@@ -222,6 +229,19 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+
+#pragma mark - Segue
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"ShowShoppingListDetails"]) {
+        ShoppingListDetailsViewController *detailsView = [segue destinationViewController];
+        NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
+        ShoppingList * list = [self.shoppingLists objectAtIndex:selectedRowIndex.row];
+        detailsView.shoppingList = list;
+    }
 }
 
 @end
