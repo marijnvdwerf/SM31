@@ -13,4 +13,6 @@
 
 @property (nonatomic, retain) ShoppingList *shoppingList;
 @property (nonatomic, retain) NSDictionary *itemDetails;
+
+- (UITableViewCell *) getCellForIdentifier:(NSString *)identifier;
 @end

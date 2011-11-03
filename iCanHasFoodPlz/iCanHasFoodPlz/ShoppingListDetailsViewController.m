@@ -6,6 +6,14 @@
 //  Copyright (c) 2011 Fontys Hogeschool ICT. All rights reserved.
 //
 
+// TODO
+// Prijzen opgeven
+// Kaartoverzicht
+// Losse gebruikers-lijstjes
+// Aantal boodschappen
+// Wegstrepen
+
+
 #import "ShoppingListDetailsViewController.h"
 
 
@@ -89,7 +97,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -99,35 +107,59 @@
     
     switch(section) {
         case 0:
-            rows = [self.shoppingList.users count];
+            // Show the shopping list in the first section
+            rows = [self.shoppingList.items count];
             break;
         case 1:
-            rows = [self.shoppingList.items count];
+            // Show the user list in the second section
+            rows = [self.shoppingList.users count];
             break;
     }
     return rows;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+- (UITableViewCell *)getCellForIdentifier:(NSString *)identifier {
+    if(!identifier) {
+        identifier = @"Cell";
     }
     
-    if(indexPath.section == 0) {
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+    
+    return cell;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell;
+    
+    switch (indexPath.section) {
+        case 0:
+            {
+            // Boodschappenlijst
+            cell = [self getCellForIdentifier:@"ShoppingListItemCell"];
             
-        // Configure the cell...
-        NSDictionary *user = [self.shoppingList.users objectAtIndex:indexPath.row];
-        cell.textLabel.text = [user objectForKey:@"name"];
-        
-    } else {
-        NSDictionary *listItem =  [self.shoppingList.items objectAtIndex:indexPath.row];
-        NSDictionary *itemInfo = [self.itemDetails objectForKey:[listItem objectForKey:@"item_id"]];
-        
-        cell.textLabel.text = [itemInfo objectForKey:@"name"];
+            NSDictionary *listItem =  [self.shoppingList.items objectAtIndex:indexPath.row];
+            NSDictionary *itemInfo = [self.itemDetails objectForKey:[listItem objectForKey:@"item_id"]];
+            
+            cell.textLabel.text = [itemInfo objectForKey:@"name"];   
+            break;
+            }
+        case 1:
+            {
+            // Gebruikerslijst
+            cell = [self getCellForIdentifier:@"ShoppingListUserCell"];
+           
+            // (laten verwijzen naar hun boodschappenlijstje, met knop om aan tegeven dat betaald is bijv.)
+            NSDictionary *user = [self.shoppingList.users objectAtIndex:indexPath.row];
+            cell.textLabel.text = [user objectForKey:@"name"];
+            break;
+            }
+        default:
+            return [self getCellForIdentifier:nil];
+            break;
     }
     
     return cell;
