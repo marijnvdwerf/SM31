@@ -144,7 +144,7 @@
             NSDictionary *listItem =  [self.shoppingList.items objectAtIndex:indexPath.row];
             NSDictionary *itemInfo = [self.itemDetails objectForKey:[listItem objectForKey:@"item_id"]];
             
-            cell.textLabel.text = [itemInfo objectForKey:@"name"];   
+            cell.textLabel.text = [[NSString alloc] initWithFormat:@"%@ × %@", [listItem objectForKey:@"count"], [itemInfo objectForKey:@"name"]];   
             break;
             }
         case 1:
